@@ -1,0 +1,372 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B150C78244FCEB70075BEAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B150C77244FCEB70075BEAC /* AppDelegate.swift */; };
+		2B150C7A244FCEB70075BEAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B150C79244FCEB70075BEAC /* SceneDelegate.swift */; };
+		2B150C7C244FCEB70075BEAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B150C7B244FCEB70075BEAC /* ViewController.swift */; };
+		2B150C7F244FCEB70075BEAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B150C7D244FCEB70075BEAC /* Main.storyboard */; };
+		2B150C82244FCEB70075BEAC /* DaumComicToon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B150C80244FCEB70075BEAC /* DaumComicToon.xcdatamodeld */; };
+		2B150C84244FCEB80075BEAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B150C83244FCEB80075BEAC /* Assets.xcassets */; };
+		2B150C87244FCEB80075BEAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B150C85244FCEB80075BEAC /* LaunchScreen.storyboard */; };
+		2B150C8F244FD4A70075BEAC /* BasicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B150C8E244FD4A70075BEAC /* BasicTableViewCell.swift */; };
+		2B150C91245003180075BEAC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B150C90245003180075BEAC /* Extension.swift */; };
+		2BD203B824594DE0009A8BAF /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD203B724594DE0009A8BAF /* LayoutViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2B150C74244FCEB70075BEAC /* DaumComicToon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaumComicToon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B150C77244FCEB70075BEAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B150C79244FCEB70075BEAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2B150C7B244FCEB70075BEAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B150C7E244FCEB70075BEAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B150C81244FCEB70075BEAC /* DaumComicToon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DaumComicToon.xcdatamodel; sourceTree = "<group>"; };
+		2B150C83244FCEB80075BEAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B150C86244FCEB80075BEAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B150C88244FCEB80075BEAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B150C8E244FD4A70075BEAC /* BasicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableViewCell.swift; sourceTree = "<group>"; };
+		2B150C90245003180075BEAC /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		2BD203B724594DE0009A8BAF /* LayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B150C71244FCEB70075BEAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B150C6B244FCEB70075BEAC = {
+			isa = PBXGroup;
+			children = (
+				2B150C76244FCEB70075BEAC /* DaumComicToon */,
+				2B150C75244FCEB70075BEAC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B150C75244FCEB70075BEAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B150C74244FCEB70075BEAC /* DaumComicToon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B150C76244FCEB70075BEAC /* DaumComicToon */ = {
+			isa = PBXGroup;
+			children = (
+				2B150C77244FCEB70075BEAC /* AppDelegate.swift */,
+				2B150C79244FCEB70075BEAC /* SceneDelegate.swift */,
+				2B150C7B244FCEB70075BEAC /* ViewController.swift */,
+				2B150C8E244FD4A70075BEAC /* BasicTableViewCell.swift */,
+				2B150C90245003180075BEAC /* Extension.swift */,
+				2B150C7D244FCEB70075BEAC /* Main.storyboard */,
+				2BD203B724594DE0009A8BAF /* LayoutViewController.swift */,
+				2B150C83244FCEB80075BEAC /* Assets.xcassets */,
+				2B150C85244FCEB80075BEAC /* LaunchScreen.storyboard */,
+				2B150C88244FCEB80075BEAC /* Info.plist */,
+				2B150C80244FCEB70075BEAC /* DaumComicToon.xcdatamodeld */,
+			);
+			path = DaumComicToon;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B150C73244FCEB70075BEAC /* DaumComicToon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B150C8B244FCEB80075BEAC /* Build configuration list for PBXNativeTarget "DaumComicToon" */;
+			buildPhases = (
+				2B150C70244FCEB70075BEAC /* Sources */,
+				2B150C71244FCEB70075BEAC /* Frameworks */,
+				2B150C72244FCEB70075BEAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DaumComicToon;
+			productName = DaumComicToon;
+			productReference = 2B150C74244FCEB70075BEAC /* DaumComicToon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B150C6C244FCEB70075BEAC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "맥북프로에임메드";
+				TargetAttributes = {
+					2B150C73244FCEB70075BEAC = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = 2B150C6F244FCEB70075BEAC /* Build configuration list for PBXProject "DaumComicToon" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B150C6B244FCEB70075BEAC;
+			productRefGroup = 2B150C75244FCEB70075BEAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B150C73244FCEB70075BEAC /* DaumComicToon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B150C72244FCEB70075BEAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B150C87244FCEB80075BEAC /* LaunchScreen.storyboard in Resources */,
+				2B150C84244FCEB80075BEAC /* Assets.xcassets in Resources */,
+				2B150C7F244FCEB70075BEAC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B150C70244FCEB70075BEAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B150C82244FCEB70075BEAC /* DaumComicToon.xcdatamodeld in Sources */,
+				2B150C7C244FCEB70075BEAC /* ViewController.swift in Sources */,
+				2BD203B824594DE0009A8BAF /* LayoutViewController.swift in Sources */,
+				2B150C78244FCEB70075BEAC /* AppDelegate.swift in Sources */,
+				2B150C91245003180075BEAC /* Extension.swift in Sources */,
+				2B150C7A244FCEB70075BEAC /* SceneDelegate.swift in Sources */,
+				2B150C8F244FD4A70075BEAC /* BasicTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2B150C7D244FCEB70075BEAC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B150C7E244FCEB70075BEAC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2B150C85244FCEB80075BEAC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B150C86244FCEB80075BEAC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B150C89244FCEB80075BEAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B150C8A244FCEB80075BEAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B150C8C244FCEB80075BEAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 477EXL8ALT;
+				INFOPLIST_FILE = DaumComicToon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brian.jstyle.DaumComicToon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B150C8D244FCEB80075BEAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 477EXL8ALT;
+				INFOPLIST_FILE = DaumComicToon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brian.jstyle.DaumComicToon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B150C6F244FCEB70075BEAC /* Build configuration list for PBXProject "DaumComicToon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B150C89244FCEB80075BEAC /* Debug */,
+				2B150C8A244FCEB80075BEAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B150C8B244FCEB80075BEAC /* Build configuration list for PBXNativeTarget "DaumComicToon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B150C8C244FCEB80075BEAC /* Debug */,
+				2B150C8D244FCEB80075BEAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2B150C80244FCEB70075BEAC /* DaumComicToon.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2B150C81244FCEB70075BEAC /* DaumComicToon.xcdatamodel */,
+			);
+			currentVersion = 2B150C81244FCEB70075BEAC /* DaumComicToon.xcdatamodel */;
+			path = DaumComicToon.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2B150C6C244FCEB70075BEAC /* Project object */;
+}
