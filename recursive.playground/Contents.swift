@@ -11,7 +11,7 @@ func recursive(input:Int) -> Int {
     } else {
         let i = recursive(input: input-1)*2+1
         print("일단 :",count,"번째",i)
-        return recursive(input: input-1)*2+1
+        return i
     }
     
 }
