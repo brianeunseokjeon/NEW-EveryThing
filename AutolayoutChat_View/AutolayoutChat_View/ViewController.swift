@@ -13,13 +13,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // MARK: - Property
     
-    
-    
-    
     @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var inputTextView: UITextView!
     @IBOutlet weak var inputViewBottomMargin: NSLayoutConstraint!
-    
     @IBOutlet weak var inputTextViewHeight: NSLayoutConstraint!
     
     var chatDatas = [String]()
