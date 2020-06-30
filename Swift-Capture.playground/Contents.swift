@@ -1,5 +1,29 @@
 import UIKit
+class Engine {
+    var name :String
+    init(name:String) {
+        self.name = name
+    }
+    deinit {
+        print("\(name)엔진 사라짐")
+    }
+}
+class Car {
+    var engine: Engine? = Engine(name: "처음 엔진")
+//    init(engine:Engine?) {
+//        self.engine = engine
+//    }
+    deinit {
+        print("차 사라짐")
+    }
+}
 
+var big: Engine? = Engine(name: "큰 엔진")
+var c: Car? = Car()
+c?.engine = big
+big = nil
+//c?.engine = nil
+c = nil
 
 func makeIncrementer(forIncrement amount: Int) -> () -> Int {
     var runningTotal = 0
@@ -104,7 +128,7 @@ func demoReferenceType() {
     print("after closure: \(pokemon.name)")
 }
 
-//demoReferenceType()
+demoReferenceType()
 
 
 //야곰의 질문?

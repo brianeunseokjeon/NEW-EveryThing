@@ -70,3 +70,4 @@ testClass3 = nil
 
 
 //클로저에 관한 메모리릭은 제일 이해가지 않았던 부분이다. 하지만 https://baked-corn.tistory.com/30 의 블로그를 보고 이해 할수 있었다.
+
