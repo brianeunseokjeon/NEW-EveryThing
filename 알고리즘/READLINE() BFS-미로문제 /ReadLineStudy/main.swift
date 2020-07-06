@@ -10,7 +10,8 @@ import Foundation
 
 struct Node:Equatable,Hashable{
     static func == (lhs: Node, rhs: Node) -> Bool {
-        guard lhs.myLevel == rhs.myLevel else { return false}
+        //1. 수정후 성공
+//        guard lhs.myLevel == rhs.myLevel else { return false}
         return lhs.myPoint.0 == rhs.myPoint.0 && lhs.myPoint.1 == rhs.myPoint.1
     }
     let myLevel:Int
@@ -45,19 +46,20 @@ func BFS(N:Int,M:Int,miro:[[Int]]) {
         
         //상: cx,cy-1 하: cx,cy+1 좌: cx-1,cy 우: cx+1,cy -> 이게 배열에서 존재하는지? 체크가 중요하다!
         //오른쪽
-        if !visit.contains(Node(myLevel: level+1, myPoint: (cx+1,cy))) && cx+1 <= miro.count-1  && miro[cx+1][cy] == 1 {
+//        2. 수정후 성공 !visit.contain 삭제함..
+        if cx+1 <= miro.count-1  && miro[cx+1][cy] == 1 {
             queue.append(Node(myLevel: level+1, myPoint: (cx+1,cy)))
         }
         //아래
-        if !visit.contains(Node(myLevel: level+1, myPoint: (cx,cy+1))) && cy+1 <= miro[cx].count-1 && miro[cx][cy+1] == 1 {
+        if cy+1 <= miro[cx].count-1 && miro[cx][cy+1] == 1 {
             queue.append(Node(myLevel: level+1, myPoint: (cx,cy+1)))
         }
         //위
-        if !visit.contains(Node(myLevel: level+1, myPoint: (cx,cy-1))) && cy-1 >= 0  && miro[cx][cy-1] == 1 {
+        if  cy-1 >= 0  && miro[cx][cy-1] == 1 {
             queue.append(Node(myLevel: level+1, myPoint: (cx,cy-1)))
         }
         //왼쪽
-        if !visit.contains(Node(myLevel: level+1, myPoint: (cx-1,cy))) && cx-1 >= 0  && miro[cx-1][cy] == 1 {
+        if  cx-1 >= 0  && miro[cx-1][cy] == 1 {
             queue.append(Node(myLevel: level+1, myPoint: (cx-1,cy)))
         }
     }

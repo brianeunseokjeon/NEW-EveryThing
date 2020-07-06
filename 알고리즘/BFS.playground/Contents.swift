@@ -5,13 +5,16 @@ import UIKit
 
 //그리디와 탐색 완전탐색/BFS/DFS
 let miros1 = [[1,0,1,1,1,1],[1,0,1,0,1,0],[1,0,1,0,1,1],[1,1,1,0,1,1]]
-let miros2 = [[1,1,1,1,1,1],[1,0,1,0,1,0],[1,0,1,0,1,1],[1,1,1,0,1,1]]
-let miros3 = [[1,0,1,1,1,1],[1,0,1,0,1,0],[1,0,1,0,1,1],[1,1,1,0,1,1]]
+let miros2 = [[1,1,0,1,1,0],[1,1,0,1,1,0],[1,1,1,1,1,1],[1,1,1,1,0,1]]
+let miros3 = [[1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1],[1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1]]
+let miros4 = [[1,0,1,1,1,1,1],[1,1,1,0,0,0,1],[1,0,0,0,0,0,1],[1,0,0,0,0,0,1],[1,0,0,0,0,0,1],[1,0,0,0,0,0,1],[1,1,1,1,1,1,1]]
+let miros6 = [[1,1,1,1,1,1],[1,0,1,0,1,0],[1,0,1,0,1,1],[1,1,1,0,1,1]]
+let miros7 = [[1,0,1,1,1,1],[1,0,1,0,1,0],[1,0,1,0,1,1],[1,1,1,0,1,1]]
 
 
 struct Node:Equatable,Hashable{
     static func == (lhs: Node, rhs: Node) -> Bool {
-        guard lhs.myLevel == rhs.myLevel else { return false}
+//        guard lhs.myLevel == rhs.myLevel else { return false}
         return lhs.myPoint.0 == rhs.myPoint.0 && lhs.myPoint.1 == rhs.myPoint.1
     }
     let myLevel:Int
@@ -24,11 +27,6 @@ struct Node:Equatable,Hashable{
     
    
 }
-
-let nod1 = Node(myLevel: 1, myPoint: (1,3))
-let nod2 = Node(myLevel: 2, myPoint: (2,3))
-let nod3 = Node(myLevel: 4, myPoint: (4,3))
-
 
 func BFS(N:Int,M:Int,miro:[[Int]]) {
     let solX:Int = N-1
@@ -52,24 +50,25 @@ func BFS(N:Int,M:Int,miro:[[Int]]) {
         
         //상: cx,cy-1 하: cx,cy+1 좌: cx-1,cy 우: cx+1,cy -> 이게 배열에서 존재하는지? 체크가 중요하다!
         //오른쪽
-        if !visit.contains(Node(myLevel: level+1, myPoint: (cx+1,cy))) && cx+1 <= miro.count-1  && miro[cx+1][cy] == 1 {
+        if cx+1 <= miro.count-1  && miro[cx+1][cy] == 1 {
             queue.append(Node(myLevel: level+1, myPoint: (cx+1,cy)))
         }
         //아래
-        if !visit.contains(Node(myLevel: level+1, myPoint: (cx,cy+1))) && cy+1 <= miro[cx].count-1 && miro[cx][cy+1] == 1 {
+        if cy+1 <= miro[cx].count-1 && miro[cx][cy+1] == 1 {
             queue.append(Node(myLevel: level+1, myPoint: (cx,cy+1)))
         }
         //위
-        if !visit.contains(Node(myLevel: level+1, myPoint: (cx,cy-1))) && cy-1 >= 0  && miro[cx][cy-1] == 1 {
+        if cy-1 >= 0  && miro[cx][cy-1] == 1 {
             queue.append(Node(myLevel: level+1, myPoint: (cx,cy-1)))
         }
         //왼쪽
-        if !visit.contains(Node(myLevel: level+1, myPoint: (cx-1,cy))) && cx-1 >= 0  && miro[cx-1][cy] == 1 {
+        if cx-1 >= 0  && miro[cx-1][cy] == 1 {
             queue.append(Node(myLevel: level+1, myPoint: (cx-1,cy)))
         }
     }
 }
 
-BFS(N: 4, M: 6, miro: miros1)
+//BFS(N: 4, M: 6, miro: miros1)
 //BFS(N: 4, M: 6, miro: miros2)
-BFS(N: 4, M: 6, miro: miros2)
+//BFS(N: 2, M: 25, miro: miros3)
+BFS(N: 7, M: 7, miro: miros4)
