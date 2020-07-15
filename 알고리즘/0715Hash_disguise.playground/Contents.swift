@@ -19,9 +19,14 @@ func solution(_ clothes:[[String]]) -> Int {
        answer *= (x.count + 1)
     }
     
-    
+   
     return answer - 1
 }
 
 solution([["yellow_hat", "headgear"], ["blue_sunglasses", "eyewear"], ["green_turban", "headgear"]])
 solution([["crow_mask", "face"], ["blue_sunglasses", "face"], ["smoky_makeup", "face"]])
+
+
+// for 구문 대신 고차함수 사용할시..
+// return  clothesDic.reduce(1) {$0 * ($1.value.count+1)} - 1
+
