@@ -29,20 +29,20 @@
                         </connections>
                     </button>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="o4G-Xq-TG9">
-                        <rect key="frame" x="30" y="151" width="410" height="120"/>
+                        <rect key="frame" x="30" y="181" width="410" height="90"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itk-hb-DqM">
-                                <rect key="frame" x="0.0" y="0.0" width="410" height="40"/>
+                                <rect key="frame" x="0.0" y="0.0" width="410" height="30"/>
                                 <color key="backgroundColor" red="0.88036641680000005" green="0.90683316059999997" blue="0.094751776800000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kai-gl-unM">
-                                <rect key="frame" x="0.0" y="40" width="410" height="40"/>
+                                <rect key="frame" x="0.0" y="30" width="410" height="30"/>
                                 <color key="backgroundColor" red="0.35630592459999999" green="0.035572821570000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahm-gk-Ele">
-                                <rect key="frame" x="0.0" y="80" width="410" height="40"/>
+                                <rect key="frame" x="0.0" y="60" width="410" height="30"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                             </button>
@@ -50,17 +50,19 @@
                     </stackView>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="JdX-JL-imX" secondAttribute="bottom" constant="30" id="43A-mj-vll"/>
                     <constraint firstItem="JdX-JL-imX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="30" id="6YE-d1-MaE"/>
                     <constraint firstAttribute="trailingMargin" secondItem="JdX-JL-imX" secondAttribute="trailing" constant="32" id="BYp-sm-kBc"/>
+                    <constraint firstItem="JdX-JL-imX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="41" id="JZk-EZ-IdU"/>
+                    <constraint firstItem="o4G-Xq-TG9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JdX-JL-imX" secondAttribute="bottom" priority="400" constant="20" id="Tjv-Rs-Z6P"/>
                     <constraint firstAttribute="trailingMargin" secondItem="o4G-Xq-TG9" secondAttribute="trailing" constant="10" id="bmB-Pc-tlp"/>
-                    <constraint firstItem="o4G-Xq-TG9" firstAttribute="top" secondItem="JdX-JL-imX" secondAttribute="bottom" constant="30" id="gnJ-Ki-QWz"/>
-                    <constraint firstItem="o4G-Xq-TG9" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="-10" id="h5o-93-Scs"/>
-                    <constraint firstAttribute="bottom" secondItem="JdX-JL-imX" secondAttribute="bottom" priority="950" constant="30" id="l1Y-Oh-DCp"/>
+                    <constraint firstItem="o4G-Xq-TG9" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" priority="500" constant="-10" id="h5o-93-Scs"/>
                     <constraint firstItem="o4G-Xq-TG9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="we6-be-E5r"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="celllayout" destination="Tjv-Rs-Z6P" id="9s4-hU-BXB"/>
                 <outlet property="stackView" destination="o4G-Xq-TG9" id="ONH-uM-2as"/>
             </connections>
             <point key="canvasLocation" x="226.08695652173915" y="68.303571428571431"/>
