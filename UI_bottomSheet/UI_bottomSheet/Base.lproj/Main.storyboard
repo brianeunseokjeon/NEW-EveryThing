@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--새로운 노트 추가-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UI_bottomSheet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyD-Wc-Mem">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.88036641680000005" green="0.90683316059999997" blue="0.094751776800000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="9jw-4z-AaM"/>
+                                    <constraint firstAttribute="height" constant="200" id="q3U-3f-vsI"/>
+                                </constraints>
+                                <state key="normal" title="탭하여 선택하기"/>
+                                <connections>
+                                    <action selector="action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zX3-ux-5Wa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="확인해보자~" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRz-bz-mgg">
+                                <rect key="frame" x="165" y="149" width="84.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pyD-Wc-Mem" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4VF-2s-iNA"/>
+                            <constraint firstItem="gRz-bz-mgg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="105" id="AhJ-zV-nOV"/>
+                            <constraint firstItem="pyD-Wc-Mem" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mB1-b3-7K8"/>
+                            <constraint firstItem="gRz-bz-mgg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s3X-qF-6zE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="새로운 노트 추가" id="onW-W7-vAu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3250.7246376811595" y="-107.14285714285714"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="vlc-hq-fWb">
+            <objects>
+                <viewController id="9OQ-Ip-g08" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3y6-AB-N56">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="7NK-OU-9iZ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="Lv6-Aa-ljh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kcc-VN-VIO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1503" y="572"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zCQ-fJ-OSC">
+            <objects>
+                <viewController id="Ztl-aj-eIP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WbM-2v-oN7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="bze-oY-cvH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="V1T-N9-9WU">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="7dY-qj-fA5"/>
+                            <barButtonItem systemItem="edit" id="0aJ-Ac-QE4"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8NF-BX-nzJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2261" y="-107"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ert-eL-4cY">
+            <objects>
+                <tabBarController id="EOr-Wa-Lxc" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uGL-wE-oCu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vGs-I9-rj9" kind="relationship" relationship="viewControllers" id="a9I-Ur-e19"/>
+                        <segue destination="9OQ-Ip-g08" kind="relationship" relationship="viewControllers" id="kqk-zk-Jed"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="khm-WL-cfQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="585" y="248"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="vTT-VY-BQg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vGs-I9-rj9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="zIK-Hl-8qS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HQV-gj-LAl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ztl-aj-eIP" kind="relationship" relationship="rootViewController" id="JU8-L0-KQX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i03-wL-oYc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1595.6521739130435" y="-107.14285714285714"/>
+        </scene>
+    </scenes>
+</document>
