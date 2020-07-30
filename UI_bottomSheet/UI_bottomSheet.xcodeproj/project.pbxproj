@@ -16,6 +16,7 @@
 		2B11FFA824D0192500CC809C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B11FFA624D0192500CC809C /* LaunchScreen.storyboard */; };
 		2BA3D0A624D15DA0005AF26A /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA3D0A524D15DA0005AF26A /* BottomSheet.swift */; };
 		2BA3D0A824D164B2005AF26A /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA3D0A724D164B2005AF26A /* CustomTableViewCell.swift */; };
+		2BA3D0AA24D28941005AF26A /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA3D0A924D28941005AF26A /* BottomSheetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2B11FFA924D0192500CC809C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BA3D0A524D15DA0005AF26A /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		2BA3D0A724D164B2005AF26A /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		2BA3D0A924D28941005AF26A /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +68,9 @@
 				2B11FF9A24D0192500CC809C /* SceneDelegate.swift */,
 				2B11FF9C24D0192500CC809C /* ViewController.swift */,
 				2B11FF9E24D0192500CC809C /* Main.storyboard */,
-				2BA3D0A524D15DA0005AF26A /* BottomSheet.swift */,
+				2BA3D0A924D28941005AF26A /* BottomSheetViewController.swift */,
 				2BA3D0A724D164B2005AF26A /* CustomTableViewCell.swift */,
+				2BA3D0A524D15DA0005AF26A /* BottomSheet.swift */,
 				2B11FFA424D0192500CC809C /* Assets.xcassets */,
 				2B11FFA624D0192500CC809C /* LaunchScreen.storyboard */,
 				2B11FFA924D0192500CC809C /* Info.plist */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BA3D0A824D164B2005AF26A /* CustomTableViewCell.swift in Sources */,
+				2BA3D0AA24D28941005AF26A /* BottomSheetViewController.swift in Sources */,
 				2B11FF9D24D0192500CC809C /* ViewController.swift in Sources */,
 				2BA3D0A624D15DA0005AF26A /* BottomSheet.swift in Sources */,
 				2B11FF9924D0192500CC809C /* AppDelegate.swift in Sources */,

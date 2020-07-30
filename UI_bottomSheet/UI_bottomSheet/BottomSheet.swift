@@ -20,6 +20,7 @@ class BottomSheet: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         makeUI()
+        searchTextField.delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -71,7 +72,7 @@ class BottomSheet: UIView {
         searchTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
 
     }
-    var tempArray = ["A","B","C","D","E","F","GF","ADFAF","afadfadf","adfadfa","ffff","Adfafadf","Adfadfdaf"]
+    var tempArray = ["A","B","C","D","E","F","GF","ADFAF","afadfadf","adfadfa","ffff","Adfafadf","Adfadfdaf","adfadfa","ffff","Adfafadf","Adfadfdaf","adfadfa","ffff","Adfafadf","Adfadfdaf","adfadfa","ffff","Adfafadf","Adfadfdaf"]
 }
 extension BottomSheet: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -87,3 +88,12 @@ extension BottomSheet: UITableViewDataSource {
     
 }
 
+extension BottomSheet: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        searchTextField.endEditing(true)
+    }
+}
