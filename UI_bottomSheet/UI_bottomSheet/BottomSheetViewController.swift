@@ -40,10 +40,10 @@ class BottomSheetViewController: UIViewController {
     
     func appearBottomSheet() {
         sheetState = .middle
-        UIView.animate(withDuration: 0.6, animations: { [weak self] in
+        UIView.animate(withDuration: 0.4, animations: { [weak self] in
             let frame = self?.view.frame
             let yComponent = self?.partialView
-            self?.view.frame = CGRect(x: 0, y: yComponent!, width: frame!.width, height: UIScreen.main.bounds.height - self!.fullView)
+            self?.view.frame = CGRect(x: 0, y: yComponent!, width: frame!.width, height: UIScreen.main.bounds.height - 300)
         })
     }
     @objc func panGesture(_ recognizer: UIPanGestureRecognizer) {
@@ -52,38 +52,47 @@ class BottomSheetViewController: UIViewController {
         let velocity = recognizer.velocity(in: self.view)
         
         let y = self.view.frame.minY
-        if (y + translation.y >= fullView) && (y + translation.y <= partialView) {
-            self.view.frame = CGRect(x: 0, y: y + translation.y, width: view.frame.width, height: view.frame.height)
-            recognizer.setTranslation(CGPoint.zero, in: self.view)
-        }
-        print("translation :",translation)
-  
+        self.view.frame = CGRect(x: 0, y: y + translation.y, width: view.frame.width, height: UIScreen.main.bounds.height)
+        recognizer.setTranslation(CGPoint.zero, in: self.view)
+        
         if recognizer.state == .ended {
-            print("여기로 들어온건 상태앤드!",velocity.y)
-            //               var duration =  velocity.y < 0 ? Double((y - fullView) / -velocity.y) : Double((partialView - y) / velocity.y )
             
-            UIView.animate(withDuration: 0.3, delay: 0.0 ,options: [.allowUserInteraction,.curveEaseInOut],animations: {
-                if  velocity.y >= 0 {
+            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.9, options: .allowUserInteraction, animations: {
+                if  velocity.y >= 0 { // 화면이 내려가야함.
                     switch self.sheetState {
                     case .top:
+                        print("여기로 들어와111111 ,:","속도 :",velocity.y,"y값 :",translation.y + y)
                         self.sheetState = .middle
                         self.view.frame = CGRect(x: 0, y: self.partialView, width: self.view.frame.width, height: self.view.frame.height)
                     default:
-                        self.sheetState = .end
-                        self.view.frame = CGRect(x: 0, y: self.endView, width: self.view.frame.width, height: self.view.frame.height)
+                        if translation.y + y <= self.partialView && translation.y + y > (self.fullView + self.partialView)/2{
+                            print("여기로 들어와222222222 ,:","속도 :",velocity.y,"y값 :",translation.y + y)
+                            self.sheetState = .middle
+                            self.view.frame = CGRect(x: 0, y: self.partialView, width: self.view.frame.width, height: self.view.frame.height)
+                        } else if translation.y + y <= (self.fullView + self.partialView)/2 {
+                            print("여기로 들어와3333333 ,:","속도 :",velocity.y,"y값 :",translation.y + y)
+                            self.sheetState = .top
+                            self.view.frame = CGRect(x: 0, y: self.fullView, width: self.view.frame.width, height: self.view.frame.height)
+                        } else {
+                            print("여기로 들어와44444444,:","속도 :",velocity.y,"y값 :",translation.y + y)
+                            self.sheetState = .end
+                            self.view.frame = CGRect(x: 0, y: self.endView, width: self.view.frame.width, height: self.view.frame.height)
+                        }
+                        
                     }
-                    
                 }
                 else {
+                    print("여기로 들어와5555555 ,:","속도 :",velocity.y,"y값 :",translation.y + y)
                     self.sheetState = .top
                     self.view.frame = CGRect(x: 0, y: self.fullView, width: self.view.frame.width, height: self.view.frame.height)
                 }
-                
-            }, completion: { [weak self] _ in
-                if ( velocity.y < 0 ) {
+            }, completion: {[weak self] _ in
+                if self.sheetState == .top {
                     self?.tableView.isScrollEnabled = true
                 }
+                
             })
+            
         }
     }
     
@@ -165,7 +174,7 @@ extension BottomSheetViewController {
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     
-   private func prepareBackgroundView(){
+    private func prepareBackgroundView(){
         let blurEffect = UIBlurEffect.init(style: .dark)
         let visualEffect = UIVisualEffectView.init(effect: blurEffect)
         let bluredView = UIVisualEffectView.init(effect: blurEffect)
