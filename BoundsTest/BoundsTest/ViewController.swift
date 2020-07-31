@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  BoundsTest
 //
-//  Created by 맥북프로에임메드 on 08/06/2020.
-//  Copyright © 2020 맥북프로에임메드. All rights reserved.
+//  Created by Brian on 08/06/2020.
+//  Copyright © 2020 Brian. All rights reserved.
 //
 
 import UIKit
