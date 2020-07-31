@@ -2,8 +2,8 @@
 //  BottomSheetViewController.swift
 //  UI_bottomSheet
 //
-//  Created by 맥북프로에임메드 on 30/07/2020.
-//  Copyright © 2020 맥북프로에임메드. All rights reserved.
+//  Created by brian on 30/07/2020.
+//  Copyright © 2020 brian. All rights reserved.
 //
 
 import UIKit
@@ -87,7 +87,7 @@ class BottomSheetViewController: UIViewController {
                     self.view.frame = CGRect(x: 0, y: self.fullView, width: self.view.frame.width, height: self.view.frame.height)
                 }
             }, completion: {[weak self] _ in
-                if self.sheetState == .top {
+                if self?.sheetState == .top {
                     self?.tableView.isScrollEnabled = true
                 }
                 
