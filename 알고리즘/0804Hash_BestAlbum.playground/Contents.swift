@@ -22,8 +22,10 @@ func solution(_ genres:[String], _ plays:[Int]) -> [Int] {
     var result = [Int]()
     for index in 0..<genres.count {
         if Album[genres[index]] == nil {
+            
             Album.updateValue([(index,plays[index])], forKey: genres[index])
             saveCount.updateValue(plays[index], forKey: genres[index])
+            
         } else {
             if Album[genres[index]]?.count == 2 {
                 
@@ -43,17 +45,22 @@ func solution(_ genres:[String], _ plays:[Int]) -> [Int] {
             
         }
     }
-   let save = saveCount.sorted { (first, second) -> Bool in
-    return first.value > second.value
+    saveCount
+        .sorted { $0.value > $1.value}
+        .forEach{
+            Album[$0.key]?.sort{$0.musicCount > $1.musicCount}
+            result += (Album[$0.key]!.map{ $0.musicIndex })
     }
-    for s in save {
-        Album[s.key]?.sort(by: { (first, second) -> Bool in
-            return first.musicCount > second.musicCount
-        })
-        for x in Album[s.key]! {
-            result.append(x.0)
-        }
-    }
+
+//    for s in save {
+//        Album[s.key]?.sort(by: { (first, second) -> Bool in
+//            return first.musicCount > second.musicCount
+//        })
+//        for x in Album[s.key]! {
+//            result.append(x.0)
+//        }
+//    }
+    
     
     return result
 }
@@ -62,7 +69,7 @@ solution(["classic","pop","classic","classic","pop","classic"], [500,600,150,800
 solution(["classic", "pop", "classic", "classic", "pop"], [500, 600, 501, 800, 900])//[3, 2, 4, 1]
 
 
-//코드가 깔끔.ㅠㅠ
+//코드가 깔끔.
 //func solution(_ genres:[String], _ plays:[Int]) -> [Int] {
 //    var playList = [String:(play: Int, music: [Int:Int])]()
 //    var answer = [Int]()
