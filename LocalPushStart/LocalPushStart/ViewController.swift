@@ -22,10 +22,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 //        userNotificationCenter.delegate = self
         requestNotificationAuthorization()
-        sendNotification(seconds: 70)
+        sendNotification(seconds: 10)
         
-        let timer = Timer()
-        timer.timeInterval
+
     }
 
     func requestNotificationAuthorization() {
@@ -52,7 +51,7 @@ class ViewController: UIViewController {
         notificationContent.title = "알림 \(count) 번째야~~~~~~"
         notificationContent.body = "이것은 \(count)번째야~ 알림을 테스트 하는 것이다"
 
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: seconds, repeats: true)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: seconds, repeats: false)
         let request = UNNotificationRequest(identifier: "testNotification",
                                             content: notificationContent,
                                             trigger: trigger)
@@ -71,9 +70,9 @@ class ViewController: UIViewController {
             let content = UNMutableNotificationContent()
 
             //Setting content of the notification
-            content.title = "This is title : Zedd"
-            content.subtitle = "This is Subtitle : UserNotifications tutorial"
-            content.body = "This is Body : 블로그 글 쓰기"
+            content.title = "고혈압 약을 먹을 타이틀"
+            content.subtitle = "서브 타이트This is Subtitle : UserNotifications tutorial"
+            content.body = "바디엔 약먹으세요~"
             content.badge = 1
             content.summaryArgument = "Alan Walker"
             content.summaryArgumentCount = 40
@@ -82,10 +81,10 @@ class ViewController: UIViewController {
             //블로그 예제에서는 TimeIntervalNotificationTrigger을 사용했지만, UNCalendarNotificationTrigger사용법도 같이 올려놓을게요!
             
             //1. Use UNCalendarNotificationTrigger
-            let date = Date(timeIntervalSinceNow: 70)
-            var dateCompenents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
-            
-            let calendartrigger = UNCalendarNotificationTrigger(dateMatching: dateCompenents, repeats: true)
+//            let date = Date(timeIntervalSinceNow: 70)
+//            var dateCompenents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+//
+//            let calendartrigger = UNCalendarNotificationTrigger(dateMatching: dateCompenents, repeats: true)
             
         guard let time = tf.text else { return }
         
@@ -98,14 +97,25 @@ class ViewController: UIViewController {
         
         
         print(datePicker.date.timeIntervalSinceNow)
-        let TimeIntervalTrigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(time) ?? 3, repeats: false)
-            
+        
+//        let TimeIntervalTrigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(time) as! TimeInterval, repeats: false)
+        
+       var date = DateComponents()
+        
+       date.hour = 9
+       date.minute = 0
+        print("Date :",date)
+       let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
+        
+        
             //Adding Request
             // MARK: - identifier가 다 달라야만 Notification Grouping이 됩니닷..!!
-        let request = UNNotificationRequest(identifier: "\(time)", content: content, trigger: TimeIntervalTrigger)
-            
+        let request = UNNotificationRequest(identifier: "1111", content: content, trigger: trigger)
+    
         
-            userNotificationCenter.add(request, withCompletionHandler: nil)
+        userNotificationCenter.add(request) { (error) in
+            print("노티 에러 :",error)
+        }
         
             
     }

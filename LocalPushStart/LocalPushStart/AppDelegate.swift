@@ -13,9 +13,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-//    Important
-//
-//    You must assign your delegate object to the UNUserNotificationCenter object before your app finishes launching. For example, in an iOS app, you must assign it in the application(_:willFinishLaunchingWithOptions:) or application(_:didFinishLaunchingWithOptions:) method of your app delegate. Assigning a delegate after these methods are called might cause you to miss incoming notifications.
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 //        UIApplication.shared.applicationIconBadgeNumber = 0
         UNUserNotificationCenter.current().delegate = self
