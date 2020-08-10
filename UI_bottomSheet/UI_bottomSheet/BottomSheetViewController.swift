@@ -43,6 +43,7 @@ class BottomSheetViewController: UIViewController {
         UIView.animate(withDuration: 0.4, animations: { [weak self] in
             let frame = self?.view.frame
             let yComponent = self?.partialView
+            print(yComponent)
             self?.view.frame = CGRect(x: 0, y: yComponent!, width: frame!.width, height: UIScreen.main.bounds.height - 300)
         })
     }
