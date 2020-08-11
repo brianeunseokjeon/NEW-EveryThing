@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         progress.topAnchor.constraint(equalTo: view.topAnchor,constant: 200).isActive = true
         progress.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 20).isActive = true
         progress.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
-        progress.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        progress.heightAnchor.constraint(equalToConstant: 80).isActive = true
     }
     
 }
