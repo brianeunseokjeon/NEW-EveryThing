@@ -103,7 +103,7 @@ class ViewController: UIViewController {
        var date = DateComponents()
         
        date.hour = 9
-       date.minute = 0
+       date.minute = 00
         print("Date :",date)
        let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
         
@@ -111,7 +111,22 @@ class ViewController: UIViewController {
             //Adding Request
             // MARK: - identifier가 다 달라야만 Notification Grouping이 됩니닷..!!
         let request = UNNotificationRequest(identifier: "1111", content: content, trigger: trigger)
-    
+       
+        
+        var date2 = DateComponents()
+
+    date2.hour = 11
+    date2.minute = 52
+     print("Date :",date)
+    let trigger2 = UNCalendarNotificationTrigger(dateMatching: date2, repeats: true)
+     
+     
+         //Adding Request
+         // MARK: - identifier가 다 달라야만 Notification Grouping이 됩니닷..!!
+     let request2 = UNNotificationRequest(identifier: "22222", content: content, trigger: trigger2)
+        userNotificationCenter.add(request2) { (error) in
+            print("노티 에러 :",error)
+        }
         
         userNotificationCenter.add(request) { (error) in
             print("노티 에러 :",error)
