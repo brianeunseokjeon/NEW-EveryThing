@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScrollViewAutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpt-sa-WJe">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g9N-pO-sbj">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="925"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWc-GF-vaM">
+                                                <rect key="frame" x="109" y="10" width="196" height="41"/>
+                                                <string key="text">1. 스크롤뷰 안에 뷰를 넣는다.
+그 뷰를 컨텐트 뷰라고 하자</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQb-ph-kJH">
+                                                <rect key="frame" x="62.5" y="201" width="289" height="61"/>
+                                                <string key="text">2. 컨텐트 뷰의 레이아웃을 잡을때, 
+ScrollView 의 Content Layout Guide 의
+위 아래 양 옆을 잡는다.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="InJ-np-WLF">
+                                                <rect key="frame" x="30.5" y="523" width="353.5" height="61"/>
+                                                <string key="text">4. 만약 세로 스크롤할꺼면, 
+ScrollView의 Frame Layout Guide 의 height값과
+컨텐트뷰의 height 값이 같다라고 제약을 걸자</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHu-xU-4Ov">
+                                                <rect key="frame" x="120.5" y="734" width="173" height="41"/>
+                                                <string key="text">5. 그 다음 컨텐트 뷰 안에 
+마음대로 넣어라.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynB-A6-eT4">
+                                                <rect key="frame" x="33.5" y="412" width="347.5" height="61"/>
+                                                <string key="text">3. 만약 가로 스크롤할꺼면, 
+ScrollView의 Frame Layout Guide 의 width값과
+컨텐트뷰의 width 값이 같다라고 제약을 걸자</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="GQb-ph-kJH" firstAttribute="top" secondItem="XWc-GF-vaM" secondAttribute="bottom" constant="150" id="06k-bR-JU2"/>
+                                            <constraint firstItem="InJ-np-WLF" firstAttribute="centerX" secondItem="g9N-pO-sbj" secondAttribute="centerX" id="73e-bX-qp7"/>
+                                            <constraint firstItem="XWc-GF-vaM" firstAttribute="top" secondItem="g9N-pO-sbj" secondAttribute="top" constant="10" id="8Ak-M5-Hmz"/>
+                                            <constraint firstAttribute="bottom" secondItem="KHu-xU-4Ov" secondAttribute="bottom" constant="150" id="Qir-LS-zXv"/>
+                                            <constraint firstItem="InJ-np-WLF" firstAttribute="top" secondItem="ynB-A6-eT4" secondAttribute="bottom" constant="50" id="Vle-Gz-6mD"/>
+                                            <constraint firstItem="ynB-A6-eT4" firstAttribute="centerX" secondItem="g9N-pO-sbj" secondAttribute="centerX" id="hUI-ow-1Cz"/>
+                                            <constraint firstItem="KHu-xU-4Ov" firstAttribute="centerX" secondItem="g9N-pO-sbj" secondAttribute="centerX" id="lpN-6p-GbA"/>
+                                            <constraint firstItem="GQb-ph-kJH" firstAttribute="centerX" secondItem="g9N-pO-sbj" secondAttribute="centerX" id="m5y-3I-vp2"/>
+                                            <constraint firstItem="ynB-A6-eT4" firstAttribute="top" secondItem="GQb-ph-kJH" secondAttribute="bottom" constant="150" id="rQf-XO-sDJ"/>
+                                            <constraint firstItem="KHu-xU-4Ov" firstAttribute="top" secondItem="InJ-np-WLF" secondAttribute="bottom" constant="150" id="uck-94-lcp"/>
+                                            <constraint firstItem="XWc-GF-vaM" firstAttribute="centerX" secondItem="g9N-pO-sbj" secondAttribute="centerX" id="veJ-Uh-tCX"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SUQ-wr-zRU" firstAttribute="trailing" secondItem="g9N-pO-sbj" secondAttribute="trailing" id="83b-PW-nLw"/>
+                                    <constraint firstItem="SUQ-wr-zRU" firstAttribute="bottom" secondItem="g9N-pO-sbj" secondAttribute="bottom" id="N5p-Yu-pf6"/>
+                                    <constraint firstItem="g9N-pO-sbj" firstAttribute="top" secondItem="SUQ-wr-zRU" secondAttribute="top" id="YIc-6b-7IZ"/>
+                                    <constraint firstItem="g9N-pO-sbj" firstAttribute="leading" secondItem="SUQ-wr-zRU" secondAttribute="leading" id="YoP-Nm-aYB"/>
+                                    <constraint firstItem="g9N-pO-sbj" firstAttribute="width" secondItem="TT3-2U-YFY" secondAttribute="width" id="j88-rf-TwN"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="SUQ-wr-zRU"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="TT3-2U-YFY"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gpt-sa-WJe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Id0-g4-pBI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gpt-sa-WJe" secondAttribute="bottom" id="NDu-GK-AUO"/>
+                            <constraint firstItem="gpt-sa-WJe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XnS-uy-NBt"/>
+                            <constraint firstItem="gpt-sa-WJe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qiG-Vt-jdD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
