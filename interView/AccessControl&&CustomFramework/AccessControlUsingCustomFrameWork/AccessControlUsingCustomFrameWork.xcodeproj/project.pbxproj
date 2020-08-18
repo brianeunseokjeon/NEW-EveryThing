@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B41298824EB6B7C00CCBF89 /* BrianJFrameWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA088A624EB6AED001FD096 /* BrianJFrameWork.framework */; };
-		2B41298924EB6B7C00CCBF89 /* BrianJFrameWork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA088A624EB6AED001FD096 /* BrianJFrameWork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2B41298D24EB8E6A00CCBF89 /* add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B41298C24EB8E6900CCBF89 /* add.swift */; };
+		2B41299724EBA4A400CCBF89 /* BrianJFrameWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B41299624EBA49600CCBF89 /* BrianJFrameWork.framework */; };
+		2B41299824EBA4A400CCBF89 /* BrianJFrameWork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B41299624EBA49600CCBF89 /* BrianJFrameWork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2BA0888B24EB6A2B001FD096 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA0888A24EB6A2B001FD096 /* AppDelegate.swift */; };
 		2BA0888D24EB6A2B001FD096 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA0888C24EB6A2B001FD096 /* SceneDelegate.swift */; };
 		2BA0888F24EB6A2B001FD096 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA0888E24EB6A2B001FD096 /* ViewController.swift */; };
@@ -20,9 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2BA088A524EB6AED001FD096 /* PBXContainerItemProxy */ = {
+		2B41299524EBA49600CCBF89 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2BA088A124EB6AED001FD096 /* BrianJFrameWork.xcodeproj */;
+			containerPortal = 2B41299124EBA49600CCBF89 /* BrianJFrameWork.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2BA0887124EB69C8001FD096;
 			remoteInfo = BrianJFrameWork;
@@ -36,7 +36,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2B41298924EB6B7C00CCBF89 /* BrianJFrameWork.framework in Embed Frameworks */,
+				2B41299824EBA4A400CCBF89 /* BrianJFrameWork.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		2B41298C24EB8E6900CCBF89 /* add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = add.swift; sourceTree = "<group>"; };
+		2B41299124EBA49600CCBF89 /* BrianJFrameWork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BrianJFrameWork.xcodeproj; path = "../BrianJFrameWork 오후 2.01.07/BrianJFrameWork.xcodeproj"; sourceTree = "<group>"; };
 		2BA0888724EB6A2B001FD096 /* AccessControlUsingCustomFrameWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccessControlUsingCustomFrameWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA0888A24EB6A2B001FD096 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BA0888C24EB6A2B001FD096 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +55,6 @@
 		2BA0889624EB6A2B001FD096 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BA0889924EB6A2B001FD096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BA0889B24EB6A2B001FD096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BA088A124EB6AED001FD096 /* BrianJFrameWork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BrianJFrameWork.xcodeproj; path = ../BrianJFrameWork/BrianJFrameWork.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B41298824EB6B7C00CCBF89 /* BrianJFrameWork.framework in Frameworks */,
+				2B41299724EBA4A400CCBF89 /* BrianJFrameWork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,10 +76,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2B41299224EBA49600CCBF89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B41299624EBA49600CCBF89 /* BrianJFrameWork.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2BA0887E24EB6A2B001FD096 = {
 			isa = PBXGroup;
 			children = (
-				2BA088A124EB6AED001FD096 /* BrianJFrameWork.xcodeproj */,
+				2B41299124EBA49600CCBF89 /* BrianJFrameWork.xcodeproj */,
 				2BA0888924EB6A2B001FD096 /* AccessControlUsingCustomFrameWork */,
 				2BA0888824EB6A2B001FD096 /* Products */,
 				2B41298624EB6B7C00CCBF89 /* Frameworks */,
@@ -108,14 +116,6 @@
 				2BA0889324EB6A2B001FD096 /* AccessControlUsingCustomFrameWork.xcdatamodeld */,
 			);
 			path = AccessControlUsingCustomFrameWork;
-			sourceTree = "<group>";
-		};
-		2BA088A224EB6AED001FD096 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2BA088A624EB6AED001FD096 /* BrianJFrameWork.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,8 +167,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 2BA088A224EB6AED001FD096 /* Products */;
-					ProjectRef = 2BA088A124EB6AED001FD096 /* BrianJFrameWork.xcodeproj */;
+					ProductGroup = 2B41299224EBA49600CCBF89 /* Products */;
+					ProjectRef = 2B41299124EBA49600CCBF89 /* BrianJFrameWork.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -179,11 +179,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		2BA088A624EB6AED001FD096 /* BrianJFrameWork.framework */ = {
+		2B41299624EBA49600CCBF89 /* BrianJFrameWork.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = BrianJFrameWork.framework;
-			remoteRef = 2BA088A524EB6AED001FD096 /* PBXContainerItemProxy */;
+			remoteRef = 2B41299524EBA49600CCBF89 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

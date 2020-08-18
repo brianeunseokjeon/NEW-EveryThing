@@ -25,15 +25,12 @@ import BrianJFrameWork
 
  private
  "private접근은 엔티티의 사용을  enclosing 선언(enclosing declaration)과 동일한 파일에 있는 해당 선언의 extension으로 제한합니다."
-
- 
  
  소스코드
  class -> open 부터 가능
  struct,enum -> public 부터 가능
  
- 
- 
+
  */
 class ViewController: UIViewController {
 
@@ -42,6 +39,7 @@ class ViewController: UIViewController {
         let a = OpenClass()
         let b = PublicClass()
 //        a.someInternalMethod() --> 외부모듈에서 접근불가능
+        print("완료")
     }
 
 
