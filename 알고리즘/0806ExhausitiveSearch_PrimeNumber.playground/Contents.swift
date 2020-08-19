@@ -9,7 +9,74 @@ var hSet = Set<Int>()
 //var resultContainerArray:[[Int]] = []
 //var aaa = [Int]()
 
-// 현재 의미없는 조합을 구현했네?ㅎㅎ;;; 순열을 구해서.
+
+
+
+var intSet: Set<Int> = []
+
+func permutation(_ arr : [Int],_ output : [Int],_ depth : Int,_ n : Int,_ r : Int) {
+    var output = output
+    var array = arr
+    if depth == r {
+        var result = ""
+        for x in output {
+            result += "\(x)"
+        }
+        intSet.insert(Int(result)!)
+        return
+    }
+    for i in (0..<n) {
+        output[depth] = arr[i]
+        array.remove(at: i)
+        permutation(array, output, depth+1, n-1, r)
+        array.insert(arr[i], at: i)
+    }
+
+}
+
+func prime(_ number:Int) -> Int? {
+    switch number {
+    case 2,3,5,7,11,13,17,19:
+        return number
+    case 0,1:
+        return nil
+    default:
+        for x in 2...Int(sqrt(Double(number))) {
+            if number % x == 0 {
+                return nil
+            }
+        }
+        return number
+    }
+}
+
+
+func solution(_ numbers:String) -> Int {
+    //옵셔널까지 자동 제거.
+    let intArray:[Int] = numbers.compactMap{Int(String($0))}
+    var count = 0
+    for ind in 1...intArray.count {
+        let outPut: [Int] = Array(repeating: 0, count: ind)
+        permutation(intArray, outPut, 0, intArray.count, ind)
+
+    }
+    for pri in intSet {
+        guard let _ = prime(pri) else { continue }
+        count += 1
+    }
+    
+    
+    return count
+}
+
+solution("011")
+intSet
+
+
+
+
+
+//조합;; 이거 필요없음
 
 func comb(arr:[Int],index:Int ,n:Int, r:Int,target:Int,currentValue:Int,indexRemain:Bool = false) {
     var value = currentValue
@@ -31,38 +98,3 @@ func comb(arr:[Int],index:Int ,n:Int, r:Int,target:Int,currentValue:Int,indexRem
         comb(arr: arr, index: index+1, n: n, r: r, target: target+1,currentValue: value ,indexRemain: true)
     }
 }
-comb(arr: [1,3,5], index: 0, n: 3, r: 2, target: 0, currentValue: 0)
-
-while h.count >= count {
-    count += 1
-    if hSet.isEmpty {
-        hSet = Set(h)
-        if hSet.contains(0) {
-            hSet.remove(0)
-        }
-    }
-    
-    
-    
-    
-    
-}
-
-
- 
-func prime(_ number:Int) -> Int? {
-    switch number {
-    case 2,3,5,7,11,13,17,19:
-        return number
-    case 1:
-        return nil
-    default:
-        for x in 2...Int(sqrt(Double(number))) {
-            if number % x == 0 {
-                return nil
-            }
-        }
-        return number
-    }
-}
-
