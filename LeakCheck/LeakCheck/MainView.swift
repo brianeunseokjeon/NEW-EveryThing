@@ -10,7 +10,7 @@ import UIKit
 
 class MainView: UIView {
 
-    let button1 = UIButton()
+    var button1 = UIButton()
     let button2 = UIButton()
     let button3 = UIButton()
     weak var controller: ViewController?
