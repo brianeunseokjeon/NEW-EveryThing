@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         //메모리 릭 나는 상황 -> 클로저를 변수에 저장 -> 후행클로저안에 self.model self 존재..
         escapingCloser {
             //여기 self는 메모리 릭과 상관없음!
-            print("순서4번",self.model)  
+            print("순서4번",self.model)
             self.mod = self.model
 
             //클로저 => self 카운트 상승. 그러나 self -> 클로저 없음..
