@@ -68,13 +68,13 @@
 				2BE4C5E224EE6C80008839F1 /* SceneDelegate.swift */,
 				2BE4C5E424EE6C80008839F1 /* ViewController.swift */,
 				2BE4C5FB24EF86F9008839F1 /* LineCircleView.swift */,
-				2BE4C5F924EF4AAE008839F1 /* GearView.swift */,
-				2BE4C5F724EF49E8008839F1 /* ViewLineViewController.swift */,
 				2BE4C5E624EE6C80008839F1 /* Main.storyboard */,
 				2BE4C5EC24EE6C81008839F1 /* Assets.xcassets */,
 				2BE4C5EE24EE6C81008839F1 /* LaunchScreen.storyboard */,
 				2BE4C5F124EE6C81008839F1 /* Info.plist */,
 				2BE4C5E924EE6C80008839F1 /* SemiCircleLinePath.xcdatamodeld */,
+				2BE4C5F924EF4AAE008839F1 /* GearView.swift */,
+				2BE4C5F724EF49E8008839F1 /* ViewLineViewController.swift */,
 			);
 			path = SemiCircleLinePath;
 			sourceTree = "<group>";

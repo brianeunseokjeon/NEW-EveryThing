@@ -9,6 +9,10 @@
 import UIKit
 import CoreGraphics
 
+
+let mainBlueColor = #colorLiteral(red: 0.184106946, green: 0.465429008, blue: 1, alpha: 1)
+
+
 class ViewController: UIViewController {
     let ge = LineCircleView()
     let lineWidth: CGFloat = 16
@@ -24,18 +28,19 @@ class ViewController: UIViewController {
         ge.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         ge.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         ge.widthAnchor.constraint(equalToConstant: view.frame.width).isActive = true
-        ge.heightAnchor.constraint(equalToConstant: view.frame.width).isActive = true
-        ge.backgroundColor = #colorLiteral(red: 0.184106946, green: 0.465429008, blue: 1, alpha: 1)
-
+        ge.heightAnchor.constraint(equalToConstant: view.frame.width/2 + 25).isActive = true
+        ge.backgroundColor = mainBlueColor
+        print("viewDidLoad")
+//        ge.addLayer(startAng: .pi, endAng: .pi*(3/2))
      
-
+        
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 //        ge.setNeedsDisplay()
-
+        print("viewdid")
     }
 
 }
