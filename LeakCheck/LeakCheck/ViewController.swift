@@ -25,6 +25,8 @@ class ViewController: UIViewController {
         super.loadView()
         
         view = mainView
+        //weak self 사용시 메모리릭 안남.
+//        print(saveSelf)
     }
     //escaping 클로저를 따로 변수로 저장하고, 후행클로저에 self가 weak으로 들어가지 않으면 순환 참조.. 메모리 릭남
     //참고로 non escaping 클로저에서는 self를 사용할 필요가없음. escaping클로저는 self를 명시함으로써 함수가 return한 후에도 탈출한 클로저가 어떤 객체를 참조하고 있는지 기억하기 위함
