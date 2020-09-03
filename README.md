@@ -36,3 +36,6 @@
     
   
 ## UI 분석
+1. DaumComicToon UI 따라잡기  50%
+2. ChatView  UI
+3. BottomSheet  미완료 80%
