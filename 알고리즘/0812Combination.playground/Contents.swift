@@ -20,4 +20,4 @@ func comb(arr:[Int],index:Int ,n:Int, r:Int,target:Int) {
 }
 
 comb(arr: choice, index: 0, n: 5, r: 3, target: 0)
-
+print(resultContainerArray)
