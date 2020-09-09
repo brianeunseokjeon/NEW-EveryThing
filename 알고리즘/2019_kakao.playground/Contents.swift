@@ -102,7 +102,7 @@ func isUnique(input:[[String]]) -> [[Int]] {
 }
 
 
-func solution(_ relation:[[String]]) -> Int {
+func solution3(_ relation:[[String]]) -> Int {
     let initArr = [Int](0..<relation[0].count)
     
     for i in 1...initArr.count {
@@ -132,4 +132,36 @@ func solution(_ relation:[[String]]) -> Int {
 
 let xx = [["100","ryan","music","2"],["200","apeach","math","2"],["300","tube","computer","3"],["400","con","computer","4"],["500","muzi","music","3"],["600","apeach","music","2"]]
 
-solution(xx)
+solution3(xx)
+
+
+//먹방 라이브쇼
+
+func solution4(_ food_times:[Int], _ k:Int64) -> Int {
+    let total = food_times.reduce(0){$0+$1}
+    var length = food_times.count
+    var sumValue = 0
+    var previous = 0
+    var sortByMinimum:[(count:Int,Index:Int)] = []
+    var target = 0
+    if total <= k {
+        return -1
+    }
+    for (index,count) in food_times.enumerated() {
+        sortByMinimum.append((count,index+1))
+    }
+    sortByMinimum.sort{$0.count < $1.count}
+    
+    while sumValue + ((sortByMinimum[0].count - previous) * length) <= k {
+        let now = sortByMinimum[0].count
+        sumValue += (now - previous) * length
+        length -= 1
+        sortByMinimum.remove(at: 0)
+        previous = now
+    }
+    target = Int(k) - sumValue
+    length = sortByMinimum.count
+    return sortByMinimum[target % length].Index
+}
+solution4([3, 1, 2], 5)
+solution4([1, 1, 1,1], 4)

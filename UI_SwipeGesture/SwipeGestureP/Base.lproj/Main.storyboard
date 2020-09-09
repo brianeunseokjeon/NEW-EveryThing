@@ -17,9 +17,29 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jW-U4-Qeq">
                                 <rect key="frame" x="20" y="295" width="374" height="418"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="illust01" translatesAutoresizingMaskIntoConstraints="NO" id="acN-JT-wNd">
+                                        <rect key="frame" x="0.0" y="208" width="125" height="106"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="125" id="iRd-Lr-2ZJ"/>
+                                            <constraint firstAttribute="height" constant="106" id="xgB-86-uvt"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="illust02" translatesAutoresizingMaskIntoConstraints="NO" id="zYA-dB-pTc">
+                                        <rect key="frame" x="249" y="208" width="125" height="106"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="106" id="LLB-7G-382"/>
+                                            <constraint firstAttribute="width" constant="125" id="Npi-ju-Tc7"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="418" id="DRG-33-ICO"/>
+                                    <constraint firstAttribute="trailing" secondItem="zYA-dB-pTc" secondAttribute="trailing" id="Owt-Pg-wcI"/>
+                                    <constraint firstAttribute="bottom" secondItem="zYA-dB-pTc" secondAttribute="bottom" constant="104" id="iHK-ec-WRO"/>
+                                    <constraint firstAttribute="bottom" secondItem="acN-JT-wNd" secondAttribute="bottom" constant="104" id="nt2-3D-gxq"/>
+                                    <constraint firstItem="acN-JT-wNd" firstAttribute="leading" secondItem="4jW-U4-Qeq" secondAttribute="leading" id="qyQ-mP-G0c"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="Phf-Ks-XsU">
@@ -82,6 +102,8 @@
                         <outletCollection property="boxes" destination="pNy-uz-haK" collectionClass="NSMutableArray" id="P89-zR-GD3"/>
                         <outletCollection property="boxes" destination="053-uF-zh0" collectionClass="NSMutableArray" id="fel-Uq-txW"/>
                         <outletCollection property="boxes" destination="JFf-nO-8EB" collectionClass="NSMutableArray" id="Lsg-fa-LLA"/>
+                        <outletCollection property="mainSideImageViews" destination="acN-JT-wNd" collectionClass="NSMutableArray" id="V26-wT-FBd"/>
+                        <outletCollection property="mainSideImageViews" destination="zYA-dB-pTc" collectionClass="NSMutableArray" id="U1O-Ky-SLr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -89,4 +111,8 @@
             <point key="canvasLocation" x="137.68115942028987" y="8.7053571428571423"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="illust01" width="92" height="133.5"/>
+        <image name="illust02" width="136.5" height="109"/>
+    </resources>
 </document>
