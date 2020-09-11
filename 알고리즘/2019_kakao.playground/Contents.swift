@@ -132,23 +132,26 @@ func solution3(_ relation:[[String]]) -> Int {
 
 let xx = [["100","ryan","music","2"],["200","apeach","math","2"],["300","tube","computer","3"],["400","con","computer","4"],["500","muzi","music","3"],["600","apeach","music","2"]]
 
-solution3(xx)
+//solution3(xx)
 
 
-//먹방 라이브쇼
+//먹방 라이브쇼 > 그리디 문제
 
 func solution4(_ food_times:[Int], _ k:Int64) -> Int {
-    let total = food_times.reduce(0){$0+$1}
-    var length = food_times.count
-    var sumValue = 0
-    var previous = 0
+    var total:Int = 0
+    var length:Int = food_times.count
+    var sumValue:Int = 0
+    var previous:Int = 0
     var sortByMinimum:[(count:Int,Index:Int)] = []
-    var target = 0
+    var target:Int = 0
+    
+    for (index,count) in food_times.enumerated() {
+        total += count
+        sortByMinimum.append((count,index+1))
+    }
+    
     if total <= k {
         return -1
-    }
-    for (index,count) in food_times.enumerated() {
-        sortByMinimum.append((count,index+1))
     }
     sortByMinimum.sort{$0.count < $1.count}
     
@@ -161,7 +164,12 @@ func solution4(_ food_times:[Int], _ k:Int64) -> Int {
     }
     target = Int(k) - sumValue
     length = sortByMinimum.count
+    sortByMinimum.sort{$0.Index<$1.Index}
+
     return sortByMinimum[target % length].Index
 }
-solution4([3, 1, 2], 5)
-solution4([1, 1, 1,1], 4)
+//solution4([3, 1, 2], 5)
+//solution4([1, 1, 1,1], 4)
+
+
+//4 길찾기 -> 그래프문제
