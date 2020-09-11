@@ -173,3 +173,146 @@ func solution4(_ food_times:[Int], _ k:Int64) -> Int {
 
 
 //4 길찾기 -> 그래프문제
+public func processTime(blockFunction: () -> ()) {
+    let startTime = CFAbsoluteTimeGetCurrent()
+    blockFunction()
+    let processTime = CFAbsoluteTimeGetCurrent() - startTime
+    print("Processing Time = \(processTime)")
+}
+
+public func example(of: String, isAction: Bool = true, action: () -> Void) {
+    print("\n ---------\(of), isAction: \(isAction)---------")
+    
+    if isAction {
+        action()
+    }
+}
+public class BinaryNode<Element> {
+    public var value: Element
+    public var leftChild: BinaryNode?
+    public var rightChild: BinaryNode?
+    var leftBoundMin: Int
+    var leftBoundMax: Int
+    var rightBoundMin: Int
+    var rightBoundMax: Int
+    
+    public init(value: Element,leftBoundMin:Int,leftBoundMax:Int,rightBoundMin:Int,rightBoundMax:Int) {
+        self.value = value
+        self.leftBoundMin = leftBoundMin
+        self.leftBoundMax = leftBoundMax
+        self.rightBoundMin = rightBoundMin
+        self.rightBoundMax = rightBoundMax
+    }
+}
+
+/**
+ BinaryNode Diagram
+ */
+//extension BinaryNode: CustomStringConvertible {
+//    public var description: String {
+//        return diagram(for: self)
+//    }
+//
+//    private func diagram(for node: BinaryNode?,
+//                         _ top: String = "",
+//                         _ root: String = "",
+//                         _ bottom: String = "") -> String {
+//        guard let node = node else {
+//            return root + "nil\n"
+//        }
+//        if node.leftChild == nil && node.rightChild == nil {
+//            return root + "\(node.value)\n"
+//        }
+//        return diagram(for: node.rightChild, top + " ", top + "┌──", top + "│ ")
+//            + root + "\(node.value)\n"
+//            + diagram(for: node.leftChild, bottom + "│ ", bottom + "└──", bottom + " ")
+//    }
+//}
+
+
+
+extension BinaryNode {
+    
+    /**
+     중위 순회 방식, 방식은 구현방식마다 조금씩 차이가 있지만, 구현 원리는 같음. 재귀적으로 자식노드의 유무를 가지고 순회하며 값을 출력합니다.
+     */
+    public func traverseInOrder(visit: (Element) -> Void) {
+        leftChild?.traverseInOrder(visit: visit)
+        visit(value)
+        rightChild?.traverseInOrder(visit: visit)
+    }
+    
+    /**
+     전위 순회는 항상 현재의 노드를 먼저 방문합니다.
+     */
+    public func traversePreOrder(visit: (Element) -> Void) {
+        visit(value)
+        leftChild?.traversePreOrder(visit: visit)
+        rightChild?.traversePreOrder(visit: visit)
+    }
+    
+    /**
+     후위 순회는 항상 현재의 노드를 먼저 방문 합니다.
+     */
+    public func traversePostOrder(visit: (Element) -> Void) {
+        leftChild?.traversePostOrder(visit: visit)
+        rightChild?.traversePostOrder(visit: visit)
+        visit(value)
+    }
+}
+
+func solution4(_ nodeinfo:[[Int]]) -> [[Int]] {
+    var addIndex:[(x:Int,y:Int,index:Int)] = []
+    for (index,value) in nodeinfo.enumerated() {
+        addIndex.append((x:value[0],y:value[1],index:index+1))
+    }
+    let sortedByBigY = addIndex.sorted{$0.y>$1.y}
+    var sameLevelArr: [[(x:Int,index:Int)]] = []
+    var now = -1
+    
+    for i in sortedByBigY {
+        let yValue = i.y
+        if yValue != now {
+            sameLevelArr.append([])
+            now = yValue
+        }
+        sameLevelArr[sameLevelArr.count-1].append((x: i.x, index: i.index ))
+    }
+    
+    // x좌표를 기준으로 정렬
+    for i in 1..<sameLevelArr.count {
+        sameLevelArr[i].sort{$0.x<$1.x}
+    }
+    let root = BinaryNode(value: sortedByBigY[0].index, leftBoundMin: 0, leftBoundMax: sortedByBigY[0].x-1, rightBoundMin: sortedByBigY[0].x+1, rightBoundMax: 100000)
+    var nodeList:[[BinaryNode<Int>]] = [[BinaryNode]]()
+    nodeList.append([root])
+    for level in 1..<sameLevelArr.count {
+        nodeList.append([])
+        for data in sameLevelArr[level] {
+            let xValue = data.x
+            let idx = data.index
+            for parent_node in nodeList[level-1] {
+                if xValue >= parent_node.leftBoundMin && xValue <= parent_node.leftBoundMax {
+                    let nowNode = BinaryNode(value: idx, leftBoundMin: parent_node.leftBoundMin, leftBoundMax: xValue - 1, rightBoundMin:  xValue + 1, rightBoundMax: parent_node.leftBoundMax)
+                    parent_node.leftChild = nowNode
+                    nodeList[level].append(nowNode)
+                } else if xValue >= parent_node.rightBoundMin && xValue <= parent_node.rightBoundMax {
+                    let nowNode = BinaryNode(value: idx, leftBoundMin: parent_node.rightBoundMin, leftBoundMax: xValue - 1, rightBoundMin:  xValue + 1, rightBoundMax: parent_node.rightBoundMax)
+                    parent_node.rightChild = nowNode
+                    nodeList[level].append(nowNode)
+                }
+            }
+        }
+    }
+    var result:[[Int]] = [[],[]]
+    root.traversePreOrder { (value) in
+        result[0].append(value)
+    }
+    root.traversePostOrder { (value) in
+        result[1].append(value)
+    }
+    
+    return result
+}
+let nodes = [[5,3],[11,5],[13,3],[3,5],[6,1],[1,3],[8,6],[7,2],[2,2]]
+solution4(nodes)
