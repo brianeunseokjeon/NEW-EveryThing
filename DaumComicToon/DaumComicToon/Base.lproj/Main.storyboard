@@ -50,13 +50,6 @@
                                                                     <viewLayoutGuide key="contentLayoutGuide" id="qND-gf-66M"/>
                                                                     <viewLayoutGuide key="frameLayoutGuide" id="2GA-XF-R0t"/>
                                                                 </scrollView>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="man" translatesAutoresizingMaskIntoConstraints="NO" id="EeI-mK-0Hf">
-                                                                    <rect key="frame" x="132" y="-30" width="110" height="110"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="110" id="KFI-Nt-Y76"/>
-                                                                        <constraint firstAttribute="height" constant="110" id="mSo-TH-Qku"/>
-                                                                    </constraints>
-                                                                </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  1위      -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7a9-TH-hM7">
                                                                     <rect key="frame" x="-10" y="-10" width="80" height="18"/>
                                                                     <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -74,11 +67,8 @@
                                                                 <constraint firstItem="7a9-TH-hM7" firstAttribute="leading" secondItem="nXH-KP-bsH" secondAttribute="leading" constant="-10" id="6TN-y1-1bW"/>
                                                                 <constraint firstItem="DlR-Q4-SHZ" firstAttribute="width" secondItem="nXH-KP-bsH" secondAttribute="width" id="D8a-Q0-Q0P"/>
                                                                 <constraint firstAttribute="height" constant="80" id="MvA-X7-kBj"/>
-                                                                <constraint firstItem="EeI-mK-0Hf" firstAttribute="centerX" secondItem="nXH-KP-bsH" secondAttribute="centerX" id="QyG-mN-3jw"/>
                                                                 <constraint firstItem="gwC-pa-6sW" firstAttribute="top" secondItem="nXH-KP-bsH" secondAttribute="top" id="Thn-3b-pYP"/>
-                                                                <constraint firstItem="EeI-mK-0Hf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7a9-TH-hM7" secondAttribute="trailing" constant="8" symbolic="YES" id="Zex-Ll-faA"/>
                                                                 <constraint firstItem="7a9-TH-hM7" firstAttribute="top" secondItem="nXH-KP-bsH" secondAttribute="top" constant="-10" id="bDj-El-lnC"/>
-                                                                <constraint firstAttribute="bottom" secondItem="EeI-mK-0Hf" secondAttribute="bottom" id="sdA-Qg-9cc"/>
                                                                 <constraint firstAttribute="trailing" secondItem="gwC-pa-6sW" secondAttribute="trailing" id="ucT-Fe-ToJ"/>
                                                                 <constraint firstItem="gwC-pa-6sW" firstAttribute="leading" secondItem="nXH-KP-bsH" secondAttribute="leading" id="xcH-0H-Im5"/>
                                                             </constraints>
@@ -105,13 +95,6 @@
                                                                     <viewLayoutGuide key="contentLayoutGuide" id="fS7-oS-jne"/>
                                                                     <viewLayoutGuide key="frameLayoutGuide" id="XmX-gy-gRP"/>
                                                                 </scrollView>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="4A2-wO-UKQ">
-                                                                    <rect key="frame" x="132" y="-30" width="110" height="110"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="110" id="ekv-hi-fXh"/>
-                                                                        <constraint firstAttribute="height" constant="110" id="taN-Zt-7wE"/>
-                                                                    </constraints>
-                                                                </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  2위      -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85R-72-Yfu">
                                                                     <rect key="frame" x="-10" y="-10" width="80" height="18"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -129,11 +112,8 @@
                                                                 <constraint firstItem="85R-72-Yfu" firstAttribute="leading" secondItem="bZC-ug-RUp" secondAttribute="leading" constant="-10" id="6E3-1T-cZv"/>
                                                                 <constraint firstItem="85R-72-Yfu" firstAttribute="top" secondItem="bZC-ug-RUp" secondAttribute="top" constant="-10" id="AOL-Wa-4q4"/>
                                                                 <constraint firstAttribute="height" constant="80" id="Eo2-Bd-Xyy"/>
-                                                                <constraint firstItem="4A2-wO-UKQ" firstAttribute="centerX" secondItem="bZC-ug-RUp" secondAttribute="centerX" id="F2s-Gz-s9C"/>
                                                                 <constraint firstAttribute="trailing" secondItem="L1A-vh-umJ" secondAttribute="trailing" id="N0d-NI-ZEh"/>
-                                                                <constraint firstAttribute="bottom" secondItem="4A2-wO-UKQ" secondAttribute="bottom" id="YF7-35-xMj"/>
                                                                 <constraint firstItem="L1A-vh-umJ" firstAttribute="top" secondItem="bZC-ug-RUp" secondAttribute="top" id="cQl-uK-CoJ"/>
-                                                                <constraint firstItem="4A2-wO-UKQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="85R-72-Yfu" secondAttribute="trailing" constant="8" symbolic="YES" id="ntP-jA-QJx"/>
                                                                 <constraint firstItem="L1A-vh-umJ" firstAttribute="leading" secondItem="bZC-ug-RUp" secondAttribute="leading" id="tDL-wd-yGr"/>
                                                                 <constraint firstItem="bM8-Vd-e9d" firstAttribute="width" secondItem="bZC-ug-RUp" secondAttribute="width" id="yHm-uE-CdU"/>
                                                             </constraints>
@@ -160,13 +140,6 @@
                                                                     <viewLayoutGuide key="contentLayoutGuide" id="eqI-b1-8x0"/>
                                                                     <viewLayoutGuide key="frameLayoutGuide" id="kVP-oy-far"/>
                                                                 </scrollView>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="women" translatesAutoresizingMaskIntoConstraints="NO" id="Y0h-Mg-CKb">
-                                                                    <rect key="frame" x="132" y="-30" width="110" height="110"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="110" id="QOr-46-Lx7"/>
-                                                                        <constraint firstAttribute="width" constant="110" id="YRg-29-k49"/>
-                                                                    </constraints>
-                                                                </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  3위      -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HR6-UH-uuY">
                                                                     <rect key="frame" x="-10" y="-10" width="80" height="18"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -179,14 +152,12 @@
                                                             <constraints>
                                                                 <constraint firstItem="HR6-UH-uuY" firstAttribute="leading" secondItem="49s-IJ-tz9" secondAttribute="leading" constant="-10" id="37f-ZQ-IAe"/>
                                                                 <constraint firstItem="djD-Ez-Kiw" firstAttribute="leading" secondItem="49s-IJ-tz9" secondAttribute="leading" id="D5H-MN-k1V"/>
-                                                                <constraint firstAttribute="bottom" secondItem="Y0h-Mg-CKb" secondAttribute="bottom" id="Mdf-jL-FXe"/>
                                                                 <constraint firstItem="J22-cC-gfO" firstAttribute="width" secondItem="49s-IJ-tz9" secondAttribute="width" id="Pl4-i7-Rkg"/>
                                                                 <constraint firstAttribute="trailing" secondItem="djD-Ez-Kiw" secondAttribute="trailing" id="c1b-CN-8WP"/>
                                                                 <constraint firstAttribute="height" constant="80" id="odI-IM-yf7"/>
                                                                 <constraint firstAttribute="leading" secondItem="HR6-UH-uuY" secondAttribute="trailing" constant="-70" id="ozS-gu-j7h"/>
                                                                 <constraint firstItem="HR6-UH-uuY" firstAttribute="top" secondItem="49s-IJ-tz9" secondAttribute="top" constant="-10" id="pmf-Ok-Ul1"/>
                                                                 <constraint firstItem="djD-Ez-Kiw" firstAttribute="top" secondItem="49s-IJ-tz9" secondAttribute="top" id="sSA-8G-Q7y"/>
-                                                                <constraint firstItem="Y0h-Mg-CKb" firstAttribute="centerX" secondItem="49s-IJ-tz9" secondAttribute="centerX" id="upt-Cl-FBe"/>
                                                                 <constraint firstAttribute="bottom" secondItem="djD-Ez-Kiw" secondAttribute="bottom" id="v9u-vc-blx"/>
                                                             </constraints>
                                                         </view>
@@ -296,9 +267,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cat" width="512" height="512"/>
         <image name="image1" width="1500" height="844"/>
-        <image name="man" width="512" height="512"/>
-        <image name="women" width="512" height="512"/>
     </resources>
 </document>

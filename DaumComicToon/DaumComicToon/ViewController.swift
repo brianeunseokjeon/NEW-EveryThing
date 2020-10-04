@@ -27,10 +27,10 @@ class ViewController: UIViewController {
         myImageView.image = UIImage(named: "image2")
         
         headerView = myTableView.tableHeaderView as? UIImageView
-                myTableView.tableHeaderView = nil
-                myTableView.addSubview(myImageView)
-                myTableView.contentInset = UIEdgeInsets(top: kTableHeaderHeight, left: 0, bottom: 0, right: 0)
-                myTableView.contentOffset = CGPoint(x: 0, y: -kTableHeaderHeight)
+        myTableView.tableHeaderView = nil
+        myTableView.addSubview(myImageView)
+        myTableView.contentInset = UIEdgeInsets(top: kTableHeaderHeight, left: 0, bottom: 0, right: 0)
+        myTableView.contentOffset = CGPoint(x: 0, y: -kTableHeaderHeight)
         
     }
 
@@ -53,26 +53,11 @@ class ViewController: UIViewController {
          }
                 
         headerView.frame = headerRect
-//        if scrollView.contentOffset.y < -280 {
-////            myTableView.contentInset.top = 100
-//        } else {
-//            if 300 - scrollView.contentOffset.y > 0 {
-//                DispatchQueue.main.async {
-//                    self.myTableView.contentInset.top = 300 - scrollView.contentOffset.y
-//                    print("????",scrollView.contentOffset.y,300 - scrollView.contentOffset.y)
-//                }
-//            }
-//        }
         
         guard let cell = myTableView.cellForRow(at: IndexPath(row: 2, section: 0)) as? BasicTableViewCell else { return }
-//        print("aaa:",cell.frame.origin.y, scrollView.contentOffset.y,scrollView.contentOffset.y + scrollView.bounds.height - 100)
-//        print("bbb:",cell.topScrollView.bounds.origin.y)
         let topScrollView = cell.topScrollView!
         let secondScrollView = cell.secondScrollView!
         let bottomScrollView = cell.bottomScrollView!
-//        print("dddd: ", topScrollView.bounds.origin.y, secondScrollView.bounds.origin.y)
-//        print("gggg: ",cell.frame.origin.y - scrollView.contentOffset.y)
-//        print("등장시기 : ",cell.frame.origin.y - scrollView.contentOffset.y > scrollView.bounds.height - 80)
         let contentHeight = topScrollView.contentSize.height - topScrollView.bounds.size.height + topScrollView.contentInset.top
         let ratio = 220 / myTableViewHeight
         let basic = cell.frame.origin.y - scrollView.contentOffset.y
