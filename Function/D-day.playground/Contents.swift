@@ -24,3 +24,14 @@ func dDay(startDate:Date) -> String {
     return "D-\(dday)"
 }
 dDay(startDate: today)
+
+
+func getSingle(){
+    
+    let date = Date()
+    let calendar = Calendar.current //켈린더 객체 생성
+    let year = calendar.component(.year, from: date)    //년
+    let month = calendar.component(.month, from: date)  //월
+    let day = calendar.component(.day, from: date)      //일
+    print(day)
+}
