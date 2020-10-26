@@ -8,8 +8,11 @@
 
 import UIKit
 
+
 class BasicCollectionViewCell: UICollectionViewCell {
+
     override func prepareForReuse() {
-//        backgroundColor = nil
+        backgroundColor = nil
     }
+
 }
