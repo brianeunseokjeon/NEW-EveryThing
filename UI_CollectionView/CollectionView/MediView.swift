@@ -33,6 +33,8 @@ class MediView: UIView {
     let thirdHorizontalFirstLine = UIView()
     let thirdHorizontalSecondLine = UIView()
     
+    
+    
     let viewModel = MediViewViewModel()
 
     lazy var containViews = [breakfastFirstView,lunchFirstView,dinnerFirstView,
@@ -98,64 +100,31 @@ class MediView: UIView {
         totalStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         totalStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         totalStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        
+        
+        
 
     }
     
     func settingUI() {
-        if viewModel.mediTimeArray.count > 0 {
-            breakfastFirstView.settingMedicine(disease: viewModel.mediTimeArray[0].disease, exist: viewModel.mediTimeArray[0].isBreakfast, isEat: true)
-            lunchFirstView.settingMedicine(disease: viewModel.mediTimeArray[0].disease, exist: viewModel.mediTimeArray[0].isLunch, isEat: false)
-            dinnerFirstView.settingMedicine(disease: viewModel.mediTimeArray[0].disease, exist: viewModel.mediTimeArray[0].isDinner, isEat: true)
+        for x in 0...8 {
+            containViews[x].settingMedicine(disease: viewModel.mediTimeArray[x].disease, exist: viewModel.mediTimeArray[x].isMedicine, isEat: viewModel.mediTimeArray[x].isEat, isCurrent: viewModel.mediTimeArray[x].isCurrentMedication)
         }
-        
-        if viewModel.mediTimeArray.count > 1 {
-            breakfastSecondView.settingMedicine(disease: viewModel.mediTimeArray[1].disease, exist: viewModel.mediTimeArray[1].isBreakfast, isEat: false)
-            lunchSecondView.settingMedicine(disease: viewModel.mediTimeArray[1].disease, exist: viewModel.mediTimeArray[1].isLunch, isEat: false)
-            dinnerSecondView.settingMedicine(disease: viewModel.mediTimeArray[1].disease, exist: viewModel.mediTimeArray[1].isDinner, isEat: true)
-        }
-        if viewModel.mediTimeArray.count > 2 {
-            breakfastThirdView.settingMedicine(disease: viewModel.mediTimeArray[2].disease, exist: viewModel.mediTimeArray[2].isBreakfast, isEat: false)
-            lunchThirdView.settingMedicine(disease: viewModel.mediTimeArray[2].disease, exist: viewModel.mediTimeArray[2].isLunch, isEat: false)
-            dinnerThirdView.settingMedicine(disease: viewModel.mediTimeArray[2].disease, exist: viewModel.mediTimeArray[2].isDinner, isEat: false)
-        }
-
     }
     
     //모델에 있어서 
     @objc func checkButton(sender:MediObjectButton) {
-        
-//        if sender.tag / 3 == 0 {
-//            if sender.tag % 3 == 0 {
-//                viewModel.mediTimeArray[0].isBreakfast.toggle()
-//            } else if sender.tag % 3 == 1 {
-//                viewModel.mediTimeArray[0].isLunch.toggle()
-//            } else {
-//                viewModel.mediTimeArray[0].isDinner.toggle()
-//            }
-//
-//        } else if sender.tag / 3 == 1 {
-//            if sender.tag % 3 == 0 {
-//                viewModel.mediTimeArray[1].isBreakfast.toggle()
-//            } else if sender.tag % 3 == 1 {
-//                viewModel.mediTimeArray[1].isLunch.toggle()
-//            } else {
-//                viewModel.mediTimeArray[1].isDinner.toggle()
-//            }
-//        } else {
-//            if sender.tag % 3 == 0 {
-//                viewModel.mediTimeArray[2].isBreakfast.toggle()
-//            } else if sender.tag % 3 == 1 {
-//                viewModel.mediTimeArray[2].isLunch.toggle()
-//            } else {
-//                viewModel.mediTimeArray[2].isDinner.toggle()
-//            }
-//        }
-//
-//        settingUI()
-        
+        if viewModel.mediTimeArray[sender.tag].isMedicine == true && viewModel.mediTimeArray[sender.tag].isCurrentMedication ==  true {
+            viewModel.mediTimeArray[sender.tag].isEat = !viewModel.mediTimeArray[sender.tag].isEat
+            
+            containViews[sender.tag].settingMedicine(disease: viewModel.mediTimeArray[sender.tag].disease,
+                                                     exist: viewModel.mediTimeArray[sender.tag].isMedicine,
+                                                     isEat: viewModel.mediTimeArray[sender.tag].isEat,
+                                                     isCurrent: viewModel.mediTimeArray[sender.tag].isCurrentMedication)
+        }
         print(sender.tag)
-//        viewModel.mediTimeArray[sender.tag/3]
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

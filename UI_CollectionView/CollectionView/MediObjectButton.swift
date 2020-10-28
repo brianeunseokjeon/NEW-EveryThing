@@ -15,6 +15,7 @@ class MediObjectButton: UIButton {
     let medicineLabel = UILabel()
    
     
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         makeUI()
@@ -27,7 +28,7 @@ class MediObjectButton: UIButton {
         plusImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         plusImageView.widthAnchor.constraint(equalToConstant: Util.ratio(43.7)).isActive = true
         plusImageView.heightAnchor.constraint(equalToConstant: Util.ratio(43.7)).isActive = true
-        plusImageView.image = UIImage(named: "icon add")
+        plusImageView.image = UIImage(named: "medi add")
         
 //        plusImageView.isHidden = true
         
@@ -57,33 +58,65 @@ class MediObjectButton: UIButton {
         checkMarkImageView.leadingAnchor.constraint(equalTo: medicineImageView.leadingAnchor,constant: Util.ratio(32.6)).isActive = true
         checkMarkImageView.widthAnchor.constraint(equalToConstant: Util.ratio(23)).isActive = true
         checkMarkImageView.heightAnchor.constraint(equalToConstant: Util.ratio(23)).isActive = true
-        checkMarkImageView.image = UIImage(named: "icon_success")
+        checkMarkImageView.image = UIImage(named: "medi_success")
         checkMarkImageView.isHidden = true
         
-        self.isEnabled = false
     }
 
-    func settingMedicine(disease:DiseaseType,exist:Bool,isEat:Bool) {
-        switch disease {
-        case .Diabetes:
-            medicineImageView.image = UIImage(named: "medicine_02")
-            medicineLabel.text = "aa"
+    func settingMedicine(disease:DiseaseType,exist:Bool,isEat:Bool,isCurrent:Bool) {
+        if isCurrent {
+            plusImageView.isHidden = false
 
-        case .HighBloodPressure:
-            medicineImageView.image = UIImage(named: "medicine_03")
-            medicineLabel.text = "bbb"
-
-        case .Hyperlipidemia:
-            medicineImageView.image = UIImage(named: "medicine_01")
-            medicineLabel.text = "ccc"
+        } else {
+            plusImageView.isHidden = true
 
         }
-        plusImageView.isHidden = exist
+
+        switch disease {
+        case .Diabetes:
+            if isCurrent {
+                medicineImageView.image = UIImage(named: "medicine_03")
+                medicineLabel.textColor = Util.blackTwo
+                plusImageView.isHidden = exist
+
+            } else {
+                medicineImageView.image = UIImage(named: "medicine_003")
+                medicineLabel.textColor = Util.brownishGrey
+            }
+            medicineLabel.text = "당뇨"
+
+        case .HighBloodPressure:
+            if isCurrent {
+                medicineImageView.image = UIImage(named: "medicine_02")
+                medicineLabel.textColor = Util.blackTwo
+                plusImageView.isHidden = exist
+
+            } else {
+                medicineImageView.image = UIImage(named: "medicine_002")
+                medicineLabel.textColor = Util.brownishGrey
+
+            }
+            medicineLabel.text = "고혈압"
+
+        case .Hyperlipidemia:
+            if isCurrent {
+                medicineImageView.image = UIImage(named: "medicine_01")
+                medicineLabel.textColor = Util.blackTwo
+                plusImageView.isHidden = exist
+
+            } else {
+                medicineImageView.image = UIImage(named: "medicine_001")
+                medicineLabel.textColor = Util.brownishGrey
+
+            }
+            medicineLabel.text = "고지혈증"
+
+        case .none:
+            break
+        }
+        
         medicineImageView.isHidden = !exist
         medicineLabel.isHidden = !exist
-        self.isEnabled = exist
-
-
         checkMarkImageView.isHidden = !isEat
     }
     
