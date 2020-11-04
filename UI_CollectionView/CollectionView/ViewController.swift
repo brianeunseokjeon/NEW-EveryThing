@@ -15,11 +15,7 @@ class ViewController: UIViewController {
     let layout = UICollectionViewFlowLayout()
         let c = UICollectionView(frame: .zero, collectionViewLayout: layout)
         layout.scrollDirection = .horizontal
-        
-        layout.minimumLineSpacing = 0
-        c.isPagingEnabled = true
-//        c.isScrollEnabled = false
-        c.setCollectionViewLayout(layout, animated: false)
+        layout.minimumLineSpacing = 1
         c.bounces = false
         return c
     }()
@@ -32,11 +28,13 @@ class ViewController: UIViewController {
         collectionView.topAnchor.constraint(equalTo: view.topAnchor,constant: 100).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        collectionView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        collectionView.heightAnchor.constraint(equalToConstant: Util.ratio(49.8)).isActive = true
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        
+        collectionView.register(BasicCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(MediMoreCollectionViewCell.self, forCellWithReuseIdentifier: "lastCell")
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = .white
         
     }
 
@@ -45,52 +43,35 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 3
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        switch indexPath.row {
-        case 0:
-            cell.backgroundColor = .blue
-        case 1:
-        cell.backgroundColor = .red
-        case 2:
-        cell.backgroundColor = .green
-        case 3:
-        cell.backgroundColor = .gray
-        default:
-            cell.backgroundColor = .orange
+        if indexPath.row == 4 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "lastCell", for: indexPath) as! MediMoreCollectionViewCell
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! BasicCollectionViewCell
+            return cell
         }
-        return cell
     }
-    
-    
 }
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 200)
+        if indexPath.row == 4 {
+            return CGSize(width: Util.ratio(64.9), height: Util.ratio(49.8))
+        } else {
+            return CGSize(width: Util.ratio(120.8), height: Util.ratio(49.8))
+        }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        return UIEdgeInsets(top: 0, left: Util.ratio(21.8), bottom: 0, right: 0)
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 4{
+            
+        } else {
+            
+        }
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let row = scrollView.contentOffset.x / UIScreen.main.bounds.width
-
-      let cell =  collectionView.cellForItem(at: IndexPath(item: Int(row), section: 0)) as! UICollectionViewCell
-                switch row {
-                case 0:
-                    cell.backgroundColor = .blue
-                case 1:
-                cell.backgroundColor = .red
-                case 2:
-                cell.backgroundColor = .green
-                case 3:
-                cell.backgroundColor = .gray
-                default:
-                    cell.backgroundColor = .orange
-                }
-
-    }
 }

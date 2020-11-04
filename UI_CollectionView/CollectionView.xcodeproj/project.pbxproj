@@ -20,6 +20,7 @@
 		2B1372EC253E62510088290B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B1372EB253E62510088290B /* Assets.xcassets */; };
 		2B1372EF253E62510088290B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1372ED253E62510088290B /* LaunchScreen.storyboard */; };
 		2B1372F7253E65A70088290B /* BasicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1372F6253E65A70088290B /* BasicCollectionViewCell.swift */; };
+		2B3E9D9B25522EC30084898D /* MediMoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E9D9A25522EC30084898D /* MediMoreCollectionViewCell.swift */; };
 		2B93338B2547A42700407A86 /* MediTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93338A2547A42700407A86 /* MediTimeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		2B1372EE253E62510088290B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B1372F0253E62510088290B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B1372F6253E65A70088290B /* BasicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCollectionViewCell.swift; sourceTree = "<group>"; };
+		2B3E9D9A25522EC30084898D /* MediMoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediMoreCollectionViewCell.swift; sourceTree = "<group>"; };
 		2B93338A2547A42700407A86 /* MediTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediTimeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +76,9 @@
 			children = (
 				2B1372DF253E624F0088290B /* AppDelegate.swift */,
 				2B1372E1253E624F0088290B /* SceneDelegate.swift */,
+				2B1372E3253E624F0088290B /* ViewController.swift */,
+				2B1372F6253E65A70088290B /* BasicCollectionViewCell.swift */,
+				2B3E9D9A25522EC30084898D /* MediMoreCollectionViewCell.swift */,
 				2B07384C2546BC770085271A /* LikeCollectionViewViewController.swift */,
 				2B0738452546A87D0085271A /* MediView.swift */,
 				2B0738512546BDAE0085271A /* MediViewViewModel.swift */,
@@ -85,8 +90,6 @@
 				2B1372ED253E62510088290B /* LaunchScreen.storyboard */,
 				2B1372F0253E62510088290B /* Info.plist */,
 				2B1372E8253E624F0088290B /* CollectionView.xcdatamodeld */,
-				2B1372E3253E624F0088290B /* ViewController.swift */,
-				2B1372F6253E65A70088290B /* BasicCollectionViewCell.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				2B07384A2546B8300085271A /* MediObjectButton.swift in Sources */,
 				2B93338B2547A42700407A86 /* MediTimeView.swift in Sources */,
 				2B1372E4253E624F0088290B /* ViewController.swift in Sources */,
+				2B3E9D9B25522EC30084898D /* MediMoreCollectionViewCell.swift in Sources */,
 				2B1372E0253E624F0088290B /* AppDelegate.swift in Sources */,
 				2B1372EA253E624F0088290B /* CollectionView.xcdatamodeld in Sources */,
 				2B1372E2253E624F0088290B /* SceneDelegate.swift in Sources */,
