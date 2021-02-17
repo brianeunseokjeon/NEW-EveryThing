@@ -75,7 +75,7 @@ func combinations<T>(source: [T], takenBy : Int) -> [[T]] {
 }
 //combinations(source: [1,2,3,4], takenBy: 3)
 
-
+// --> AB , BA 를 동일 취급하기 위해 Set으로 바꿨는데,, 정렬하면 됨!
 func solution(_ orders:[String], _ course:[Int]) -> [String] {
     var dic = [Set<String.Element>:Int]()
     var resultDic = [Int:Int]()
