@@ -94,6 +94,8 @@ let b = "- and - and - and - 150".split(separator: " ").filter{$0 != "and"}
 
 
 
+
+
 func solution(_ info:[String], _ query:[String]) -> [Int] {
     let language = ["cpp", "java", "python", "-"]
     let position = ["backend", "frontend", "-"]
