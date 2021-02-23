@@ -127,102 +127,105 @@ var g = df.date(from: h)?.addingTimeInterval(44)
 
 
 func solution(_ play_time:String, _ adv_time:String, _ logs:[String]) -> String {
-    func changeToSeconds(time:String) -> Int {
-        let splitTime:[String.SubSequence] = time.split(separator: ":")
-        let totalTime:Int = Int(splitTime[0])! * 3600 + Int(splitTime[1])! * 60 + Int(splitTime[2])!
-        return totalTime
-    }
-    
-    func changeToLogs(times:[String]) -> [(start:Int,end:Int)] {
-//        let sortTimes:[String] = times.sorted()
-       
-        var result:[(start: Int, end: Int)] = Array<(start:Int,end:Int)>()
-        for time in times {
-            let h: [String.SubSequence] = time.split(separator: "-")
-            let timeStart = changeToSeconds(time: String(h[0]))
-            let timeLast = changeToSeconds(time: String(h[1]))
-            result.append((timeStart,timeLast))
-        }
-        return result
-    }
-    
-    func timeToString(second:Int) -> String {
-        var res: [String] = ["","",""]
-        let hour: Int = second / 3600
-        let minute: Int = (second % 3600) / 60
-        let second: Int = second % 60
-        
-        if hour > 10 {
-            res[0] = "\(hour)"
-        } else {
-            res[0] = "0\(hour)"
-        }
-        
-        if minute > 10 {
-            res[1] = "\(minute)"
-        } else {
-            res[1] = "0\(minute)"
-        }
-        
-        if second > 10 {
-            res[2] = "\(second)"
-        } else {
-            res[2] = "0\(second)"
-        }
-        return res[0]+":"+res[1]+":"+res[2]
+//    func changeToSeconds(time:String) -> Int {
+//        let splitTime:[String.SubSequence] = time.split(separator: ":")
+//        let totalTime:Int = Int(splitTime[0])! * 3600 + Int(splitTime[1])! * 60 + Int(splitTime[2])!
+//        return totalTime
+//    }
+//
+//    func changeToLogs(times:[String]) -> [(start:Int,end:Int)] {
+////        let sortTimes:[String] = times ..sorted()
+//
+//        var result:[(start: Int, end: Int)] = Array<(start:Int,end:Int)>()
+//        for time in times {
+//            let h: [String.SubSequence] = time.split(separator: "-")
+//            let timeStart = changeToSeconds(time: String(h[0]))
+//            let timeLast = changeToSeconds(time: String(h[1]))
+//            result.append((timeStart,timeLast))
+//        }
+//        return result
+//    }
+    func toNumber(_ str : String) -> Int {
+           let s = str.split(separator : ":").map{Int(String($0))!}
+           return s[0]*3600 + s[1] * 60 + s[2]
+       }
+    func timeToString(_ num:Int) -> String {
+//        var res: [String] = ["","",""]
+//        let hour: Int = second / 3600
+//        let minute: Int = (second % 3600) / 60
+//        let second: Int = second % 60
+//
+//        if hour >= 10 {
+//            res[0] = "\(hour)"
+//        } else {
+//            res[0] = "0\(hour)"
+//        }
+//
+//        if minute >= 10 {
+//            res[1] = "\(minute)"
+//        } else {
+//            res[1] = "0\(minute)"
+//        }
+//
+//        if second >= 10 {
+//            res[2] = "\(second)"
+//        } else {
+//            res[2] = "0\(second)"
+//        }
+//        return res[0]+":"+res[1]+":"+res[2]
+        return "\(num/3600 < 10 ? "0" : "")\(num/3600):\(num%3600/60 < 10 ? "0" : "")\(num%3600/60):\(num%3600%60 < 10 ? "0" : "")\(num%3600%60)"
+
     }
     
     
     var resultArray: [Int] = Array(repeating: 0, count: 360001)
-    var resultSumArray: [Int] = Array(repeating: 0, count: 360001)
-    let myPlayTime: Int = changeToSeconds(time: play_time)
-    let myAdvTime: Int = changeToSeconds(time: adv_time)
-    let mylogs: [(start: Int, end: Int)] = changeToLogs(times: logs)
-    
+    let myPlayTime: Int = toNumber(play_time)
+    let myAdvTime: Int = toNumber(adv_time)
+//    let mylogs: [(start: Int, end: Int)] = toNumber(logs)
+    var mylogs : [(Int,Int)] = logs.map{
+            let l = $0.split(separator: "-").map{String($0)}
+            return (toNumber(l[0]),toNumber(l[1]))
+        }
     
     if myPlayTime <= myAdvTime {
         return "00:00:00"
-    } else if (myPlayTime - mylogs[0].start) < myAdvTime  {
-        return timeToString(second: myPlayTime - myAdvTime)
-    }
-    var last:Int = 0
-    for playTime in mylogs {
-        last = max(playTime.end,last)
-        
-        for x in playTime.start+1...playTime.end {
-            resultArray[x] += 1
-        }
     }
     
-    for x in 1...360000 {
-        resultSumArray[x] = resultSumArray[x-1] + resultArray[x]
+    for playTime in mylogs {
+        resultArray[playTime.0] += 1
+        resultArray[playTime.1] += -1
+    }
+    
+    //현재
+    for playTime in 1..<myPlayTime {
+        resultArray[playTime] = resultArray[playTime] + resultArray[playTime-1]
+    }
+    
+    //누적
+    for playTime in 1..<myPlayTime {
+        resultArray[playTime] = resultArray[playTime] + resultArray[playTime-1]
     }
     
 
     var maxSum:Int = 0
-    var maxSumAdStartTime:Int = mylogs[0].start
+    var maxSumAdStartTime:Int = 0
     
-    for startTime in 1...last {
-        let endAdtime = startTime + myAdvTime > 360000 ? 36000 : startTime + myAdvTime
+    for startTime in 0..<myPlayTime {
+        let endAdtime = startTime + myAdvTime >= myPlayTime ? myPlayTime-1  : startTime + myAdvTime - 1
         var tempAdTime = 0
         
-        tempAdTime = resultSumArray[endAdtime] - resultSumArray[startTime]
+        
+        tempAdTime = resultArray[endAdtime] - resultArray[startTime-1 < 0 ? 0 : startTime-1]
         
         if maxSum < tempAdTime {
             maxSum = tempAdTime
             maxSumAdStartTime = startTime
         }
-        if endAdtime == 360000 {
-            break
-        }
+
     }
     
     
-    
-    
-    
-    return timeToString(second: maxSumAdStartTime)
-    
+    return timeToString(maxSumAdStartTime)
 }
 
 
