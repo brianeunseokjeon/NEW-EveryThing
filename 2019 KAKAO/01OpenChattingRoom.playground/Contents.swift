@@ -49,3 +49,32 @@ let input = ["Enter uid1234 Muzi", "Enter uid4567 Prodo","Leave uid1234","Enter 
 
 solution(input)
 
+
+
+//이게 해설지 풀이
+func solution2(_ record:[String]) -> [String] {
+    var userName = [String:String]()
+    var userState:[(id:String,state:String)] = []
+    var result:[String] = []
+    for user in record {
+        let userInfo = user.split(separator: " ")
+        let userId = String(userInfo[1])
+        if userInfo.first == "Enter" {
+            let name = String(userInfo[2])
+            userName[userId] = name
+            userState.append((userId,"님이 들어왔습니다."))
+        } else if userInfo.first == "Leave" {
+            userState.append((userId,"님이 나갔습니다."))
+        } else {
+            let name = String(userInfo[2])
+            userName[userId] = name
+        }
+    }
+    for (id,state) in userState {
+        result.append(userName[id]!+state)
+    }
+    
+    return result
+    
+}
+solution2(input)
