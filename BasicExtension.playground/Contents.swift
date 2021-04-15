@@ -94,3 +94,14 @@ let targetArray = [1,3,4,5]
 ceil(6.3) // 7
 floor(6.3) // 6
 round(6.3) // 5
+
+
+//진법 10진법 -> 2진수
+let decimal: Int = 30
+let binary: String = String(decimal, radix: 2)
+print(binary)
+
+// 3진수 -> 10진수
+let binary3: String = "11011"
+let decimal3: Int = Int(binary3, radix: 3)!
+print(decimal3)
