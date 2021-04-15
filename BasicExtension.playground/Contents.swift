@@ -105,3 +105,18 @@ print(binary)
 let binary3: String = "11011"
 let decimal3: Int = Int(binary3, radix: 3)!
 print(decimal3)
+
+
+//소수
+
+func prime(_ sosu: Int) -> Bool {
+    if sosu < 2 {
+        return false
+    }
+    for i in 2..<Int(sqrt(Double(sosu)))+1 {
+        if (sosu % i) == 0 {
+            return false
+        }
+    }
+    return true
+}
