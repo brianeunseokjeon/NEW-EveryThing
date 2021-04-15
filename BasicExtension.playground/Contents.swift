@@ -120,3 +120,21 @@ func prime(_ sosu: Int) -> Bool {
     }
     return true
 }
+
+//최대공약수
+func gcd(_ w:Int, _ h:Int) -> Int {
+    var maxNumber = max(w, h)
+    var minNumber = min(w,h)
+
+    while maxNumber % minNumber != 0 {
+        let temp = maxNumber % minNumber
+        maxNumber = max(minNumber, temp)
+        minNumber = min(minNumber, temp)
+    }
+
+    return minNumber
+}
+// 최소공배수
+func lcm(_ a: Int, _ b:Int) -> Int {
+    return a * b / gcd(a,b)
+}
