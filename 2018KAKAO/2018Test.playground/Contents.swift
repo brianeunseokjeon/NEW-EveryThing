@@ -86,15 +86,15 @@ func solution1(_ n:Int, _ arr1:[Int], _ arr2:[Int]) -> [String] {
     return answer
 }
 
-    
+
 solution1(5, [9, 20, 28, 18, 11], [30, 1, 21, 17, 28])
-    
+
 solution1(6, [46, 33, 33 ,22, 31, 50], [27 ,56, 19, 14, 14, 1])
 
 
 func solution1111(_ n:Int, _ arr1:[Int], _ arr2:[Int]) -> [String] {
     var answer: [String] = []
-
+    
     for i in 0..<n {
         var bitwise = String(arr1[i] | arr2[i], radix: 2)
         bitwise = String(repeating: "0", count: n-bitwise.count) + bitwise
@@ -103,7 +103,7 @@ func solution1111(_ n:Int, _ arr1:[Int], _ arr2:[Int]) -> [String] {
             answer[i] += b == "1" ? "#" : " "
         }
     }
-
+    
     return answer
 }
 
@@ -113,7 +113,7 @@ func solution1111(_ n:Int, _ arr1:[Int], _ arr2:[Int]) -> [String] {
 func solution22(_ dartResult:String) -> Int {
     var points = [0,0,0]
     var index = -1
-
+    
     var previous: Character = " "
     for input in dartResult {
         print("현재 인덱스 :",index, "현재 값 :",input)
@@ -141,12 +141,12 @@ func solution22(_ dartResult:String) -> Int {
         }
         previous = input
     }
-
+    
     var result: Int = 0
     for point in points {
         result += point
     }
-
+    
     return result
 }
 
@@ -198,7 +198,7 @@ let f = (0,["Jeju", "Pangyo", "Seoul", "NewYork", "LA"])
 //solution333(f.0, f.1)
 
 
-//뉴스 클러스터링
+//뉴스 클러스터링 -> 딕셔너리를 이용한다는게 포인트
 
 
 func solution1(_ str1:String, _ str2:String) -> Int {
@@ -229,7 +229,7 @@ func solution1(_ str1:String, _ str2:String) -> Int {
     
     stack1.keys.forEach{keySet.insert($0)}
     stack2.keys.forEach{keySet.insert($0)}
-
+    
     for key in keySet {
         if let first = stack1[key], let second = stack2[key] {
             same += min(first,second)
@@ -259,9 +259,95 @@ let fir1 = ("E=M*C^2","e=m*c^2")
 
 // 스트링으로 알파벳.체크
 extension String {
-  var isAllAlphabet: Bool {
-    return !isEmpty && range(of: "[^a-zA-Z]", options: .regularExpression) == nil
-  }
+    var isAllAlphabet: Bool {
+        return !isEmpty && range(of: "[^a-zA-Z]", options: .regularExpression) == nil
+    }
 }
 
 "abcd ".isAllAlphabet
+
+
+// 프렌즈 4블록 하다가 그만!! nil 되는 공간에 위에서 블록값을 내려줘야하는데;; 아 ;;
+
+var m = 4
+let n = 5
+
+
+//var nowIndex:(x:Int,y:Int) = (0,0)
+
+
+struct Tuple: Hashable {
+    var x:Int
+    var y:Int
+}
+
+func solution2(_ m:Int, _ n:Int, _ board:[String]) -> Int {
+    var myBoard: [[String?]] = board.map{$0.map{String($0)}}
+    var row = 0
+    var column = 0
+    var setTuple = Set<Tuple>()
+    var currentRemoveCount = 0
+    var nowIndex:(x:Int,y:Int) {
+        return (row,column)
+    }
+    var isEnd = false
+    while (row < m-1 && column < n-1) && isEnd == false {
+        let currentText = myBoard[nowIndex.x][nowIndex.y]
+        let next = myBoard[nowIndex.x][nowIndex.y + 1]
+        let down = myBoard[nowIndex.x + 1][nowIndex.y]
+        let downNext = myBoard[nowIndex.x + 1][nowIndex.y + 1]
+        print("현재 행:",row,"현재 열",column)
+        print(currentText,next,down,downNext)
+        
+        
+        if currentText == next && currentText == down && currentText == downNext && currentText != nil {
+            setTuple.insert(Tuple(x: nowIndex.x, y: nowIndex.y))
+            setTuple.insert(Tuple(x: nowIndex.x+1, y: nowIndex.y))
+            setTuple.insert(Tuple(x: nowIndex.x, y: nowIndex.y+1))
+            setTuple.insert(Tuple(x: nowIndex.x+1, y: nowIndex.y+1))
+
+        }
+        if row == m-2 && column == n-2 {
+            if setTuple.count == 0 {
+                isEnd = true
+            } else {
+                currentRemoveCount += setTuple.count
+                
+               let sortedSetTuple = setTuple.sorted { (tu1, tu2) -> Bool in
+                    if tu1.y < tu2.y {
+                        return (tu1.x < tu2.x) == true
+                    } else {
+                        return false
+                    }
+                }
+                
+                for t in sortedSetTuple {
+                    myBoard[t.x][t.y] = nil
+                }
+                var currentTuple = Tuple(x: 0, y: 0)
+                for t in sortedSetTuple {
+                    currentTuple = t
+                    
+                }
+                
+                
+                
+            }
+            break
+        } else if row == m-2 {
+            row = 0
+            column += 1
+        } else {
+            row += 1
+        }
+ 
+    }
+    
+    return setTuple.count
+}
+
+let sec2 = (4,5,["CCBDE", "AAADE", "AAABF", "CCBBF"])
+//let sec2 = (6,6,["TTTANT", "RRFACC", "RRRFCC", "TRRRAA", "TTMMMF", "TMMTTJ"])
+
+
+solution2(sec2.0, sec2.1, sec2.2)
