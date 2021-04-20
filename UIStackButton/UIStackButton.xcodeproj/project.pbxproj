@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B641D482623C618009029E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B641D472623C618009029E6 /* AppDelegate.swift */; };
+		2B641D4A2623C618009029E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B641D492623C618009029E6 /* SceneDelegate.swift */; };
+		2B641D4C2623C618009029E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B641D4B2623C618009029E6 /* ViewController.swift */; };
+		2B641D4F2623C618009029E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B641D4D2623C618009029E6 /* Main.storyboard */; };
+		2B641D522623C618009029E6 /* UIStackButton.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B641D502623C618009029E6 /* UIStackButton.xcdatamodeld */; };
+		2B641D542623C619009029E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B641D532623C619009029E6 /* Assets.xcassets */; };
+		2B641D572623C619009029E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B641D552623C619009029E6 /* LaunchScreen.storyboard */; };
+		2B641D622623C619009029E6 /* UIStackButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B641D612623C619009029E6 /* UIStackButtonTests.swift */; };
+		2B641D6D2623C619009029E6 /* UIStackButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B641D6C2623C619009029E6 /* UIStackButtonUITests.swift */; };
+		2B641D7E2623CA94009029E6 /* MyStackButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B641D7D2623CA94009029E6 /* MyStackButtons.swift */; };
+		2B641D832623CBA4009029E6 /* MyStackButtonsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B641D822623CBA4009029E6 /* MyStackButtonsModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B641D5E2623C619009029E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B641D3C2623C618009029E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B641D432623C618009029E6;
+			remoteInfo = UIStackButton;
+		};
+		2B641D692623C619009029E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B641D3C2623C618009029E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B641D432623C618009029E6;
+			remoteInfo = UIStackButton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B641D442623C618009029E6 /* UIStackButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIStackButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B641D472623C618009029E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B641D492623C618009029E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2B641D4B2623C618009029E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B641D4E2623C618009029E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B641D512623C618009029E6 /* UIStackButton.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UIStackButton.xcdatamodel; sourceTree = "<group>"; };
+		2B641D532623C619009029E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B641D562623C619009029E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B641D582623C619009029E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B641D5D2623C619009029E6 /* UIStackButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIStackButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B641D612623C619009029E6 /* UIStackButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackButtonTests.swift; sourceTree = "<group>"; };
+		2B641D632623C619009029E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B641D682623C619009029E6 /* UIStackButtonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIStackButtonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B641D6C2623C619009029E6 /* UIStackButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackButtonUITests.swift; sourceTree = "<group>"; };
+		2B641D6E2623C619009029E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B641D7D2623CA94009029E6 /* MyStackButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStackButtons.swift; sourceTree = "<group>"; };
+		2B641D822623CBA4009029E6 /* MyStackButtonsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStackButtonsModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B641D412623C618009029E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B641D5A2623C619009029E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B641D652623C619009029E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B641D3B2623C618009029E6 = {
+			isa = PBXGroup;
+			children = (
+				2B641D462623C618009029E6 /* UIStackButton */,
+				2B641D602623C619009029E6 /* UIStackButtonTests */,
+				2B641D6B2623C619009029E6 /* UIStackButtonUITests */,
+				2B641D452623C618009029E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B641D452623C618009029E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B641D442623C618009029E6 /* UIStackButton.app */,
+				2B641D5D2623C619009029E6 /* UIStackButtonTests.xctest */,
+				2B641D682623C619009029E6 /* UIStackButtonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B641D462623C618009029E6 /* UIStackButton */ = {
+			isa = PBXGroup;
+			children = (
+				2B641D472623C618009029E6 /* AppDelegate.swift */,
+				2B641D492623C618009029E6 /* SceneDelegate.swift */,
+				2B641D4B2623C618009029E6 /* ViewController.swift */,
+				2B641D7D2623CA94009029E6 /* MyStackButtons.swift */,
+				2B641D822623CBA4009029E6 /* MyStackButtonsModel.swift */,
+				2B641D4D2623C618009029E6 /* Main.storyboard */,
+				2B641D532623C619009029E6 /* Assets.xcassets */,
+				2B641D552623C619009029E6 /* LaunchScreen.storyboard */,
+				2B641D582623C619009029E6 /* Info.plist */,
+				2B641D502623C618009029E6 /* UIStackButton.xcdatamodeld */,
+			);
+			path = UIStackButton;
+			sourceTree = "<group>";
+		};
+		2B641D602623C619009029E6 /* UIStackButtonTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B641D612623C619009029E6 /* UIStackButtonTests.swift */,
+				2B641D632623C619009029E6 /* Info.plist */,
+			);
+			path = UIStackButtonTests;
+			sourceTree = "<group>";
+		};
+		2B641D6B2623C619009029E6 /* UIStackButtonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2B641D6C2623C619009029E6 /* UIStackButtonUITests.swift */,
+				2B641D6E2623C619009029E6 /* Info.plist */,
+			);
+			path = UIStackButtonUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B641D432623C618009029E6 /* UIStackButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B641D712623C619009029E6 /* Build configuration list for PBXNativeTarget "UIStackButton" */;
+			buildPhases = (
+				2B641D402623C618009029E6 /* Sources */,
+				2B641D412623C618009029E6 /* Frameworks */,
+				2B641D422623C618009029E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIStackButton;
+			productName = UIStackButton;
+			productReference = 2B641D442623C618009029E6 /* UIStackButton.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B641D5C2623C619009029E6 /* UIStackButtonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B641D742623C619009029E6 /* Build configuration list for PBXNativeTarget "UIStackButtonTests" */;
+			buildPhases = (
+				2B641D592623C619009029E6 /* Sources */,
+				2B641D5A2623C619009029E6 /* Frameworks */,
+				2B641D5B2623C619009029E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B641D5F2623C619009029E6 /* PBXTargetDependency */,
+			);
+			name = UIStackButtonTests;
+			productName = UIStackButtonTests;
+			productReference = 2B641D5D2623C619009029E6 /* UIStackButtonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2B641D672623C619009029E6 /* UIStackButtonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B641D772623C619009029E6 /* Build configuration list for PBXNativeTarget "UIStackButtonUITests" */;
+			buildPhases = (
+				2B641D642623C619009029E6 /* Sources */,
+				2B641D652623C619009029E6 /* Frameworks */,
+				2B641D662623C619009029E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B641D6A2623C619009029E6 /* PBXTargetDependency */,
+			);
+			name = UIStackButtonUITests;
+			productName = UIStackButtonUITests;
+			productReference = 2B641D682623C619009029E6 /* UIStackButtonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B641D3C2623C618009029E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					2B641D432623C618009029E6 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					2B641D5C2623C619009029E6 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 2B641D432623C618009029E6;
+					};
+					2B641D672623C619009029E6 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 2B641D432623C618009029E6;
+					};
+				};
+			};
+			buildConfigurationList = 2B641D3F2623C618009029E6 /* Build configuration list for PBXProject "UIStackButton" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B641D3B2623C618009029E6;
+			productRefGroup = 2B641D452623C618009029E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B641D432623C618009029E6 /* UIStackButton */,
+				2B641D5C2623C619009029E6 /* UIStackButtonTests */,
+				2B641D672623C619009029E6 /* UIStackButtonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B641D422623C618009029E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B641D572623C619009029E6 /* LaunchScreen.storyboard in Resources */,
+				2B641D542623C619009029E6 /* Assets.xcassets in Resources */,
+				2B641D4F2623C618009029E6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B641D5B2623C619009029E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B641D662623C619009029E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B641D402623C618009029E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B641D4C2623C618009029E6 /* ViewController.swift in Sources */,
+				2B641D482623C618009029E6 /* AppDelegate.swift in Sources */,
+				2B641D7E2623CA94009029E6 /* MyStackButtons.swift in Sources */,
+				2B641D832623CBA4009029E6 /* MyStackButtonsModel.swift in Sources */,
+				2B641D522623C618009029E6 /* UIStackButton.xcdatamodeld in Sources */,
+				2B641D4A2623C618009029E6 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B641D592623C619009029E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B641D622623C619009029E6 /* UIStackButtonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B641D642623C619009029E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B641D6D2623C619009029E6 /* UIStackButtonUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B641D5F2623C619009029E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B641D432623C618009029E6 /* UIStackButton */;
+			targetProxy = 2B641D5E2623C619009029E6 /* PBXContainerItemProxy */;
+		};
+		2B641D6A2623C619009029E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B641D432623C618009029E6 /* UIStackButton */;
+			targetProxy = 2B641D692623C619009029E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2B641D4D2623C618009029E6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B641D4E2623C618009029E6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2B641D552623C619009029E6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B641D562623C619009029E6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B641D6F2623C619009029E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B641D702623C619009029E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B641D722623C619009029E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 477EXL8ALT;
+				INFOPLIST_FILE = UIStackButton/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jstyle.UIStackButton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B641D732623C619009029E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 477EXL8ALT;
+				INFOPLIST_FILE = UIStackButton/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jstyle.UIStackButton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2B641D752623C619009029E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 477EXL8ALT;
+				INFOPLIST_FILE = UIStackButtonTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jstyle.UIStackButtonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIStackButton.app/UIStackButton";
+			};
+			name = Debug;
+		};
+		2B641D762623C619009029E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 477EXL8ALT;
+				INFOPLIST_FILE = UIStackButtonTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jstyle.UIStackButtonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIStackButton.app/UIStackButton";
+			};
+			name = Release;
+		};
+		2B641D782623C619009029E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 477EXL8ALT;
+				INFOPLIST_FILE = UIStackButtonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jstyle.UIStackButtonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UIStackButton;
+			};
+			name = Debug;
+		};
+		2B641D792623C619009029E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 477EXL8ALT;
+				INFOPLIST_FILE = UIStackButtonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jstyle.UIStackButtonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UIStackButton;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B641D3F2623C618009029E6 /* Build configuration list for PBXProject "UIStackButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B641D6F2623C619009029E6 /* Debug */,
+				2B641D702623C619009029E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B641D712623C619009029E6 /* Build configuration list for PBXNativeTarget "UIStackButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B641D722623C619009029E6 /* Debug */,
+				2B641D732623C619009029E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B641D742623C619009029E6 /* Build configuration list for PBXNativeTarget "UIStackButtonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B641D752623C619009029E6 /* Debug */,
+				2B641D762623C619009029E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B641D772623C619009029E6 /* Build configuration list for PBXNativeTarget "UIStackButtonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B641D782623C619009029E6 /* Debug */,
+				2B641D792623C619009029E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2B641D502623C618009029E6 /* UIStackButton.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2B641D512623C618009029E6 /* UIStackButton.xcdatamodel */,
+			);
+			currentVersion = 2B641D512623C618009029E6 /* UIStackButton.xcdatamodel */;
+			path = UIStackButton.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2B641D3C2623C618009029E6 /* Project object */;
+}
