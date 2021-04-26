@@ -86,6 +86,7 @@ func solution(_ w:Int, _ h:Int) -> Int64{
 
 
 
+// 삼각 달팽이
 func solution(_ n:Int) -> [Int] {
     let delta:[(x:Int,y:Int)] = [(1,0),(0,1),(-1,-1)]
     var currentDeltaIndex = 0
@@ -120,5 +121,151 @@ func solution(_ n:Int) -> [Int] {
     }
     return array.flatMap{$0}
 }
-solution(5)
+//solution(5)
+
+func combination<T:Hashable>(n:Int,r:Int,targetArray:[T],basic:T) -> [[T]] {
+    var result: [[T]] = []
+    let array = Array<T>.init(repeating: basic, count: r)
+    
+    func comb(repeatArr:[T],index:Int ,n:Int, r:Int,targetArray:[T],target:Int) {
+        var array = repeatArr
+        if r == 0 {
+            result.append(array)
+        } else if target == n {
+            return
+        } else {
+            array[index] = targetArray[target]
+            comb(repeatArr: array, index: index+1, n: n, r: r-1,targetArray: targetArray ,target: target+1)
+            comb(repeatArr: array, index: index, n: n, r: r,targetArray: targetArray ,target: target+1)
+        }
+    }
+    comb(repeatArr: array, index: 0, n: n, r: r,targetArray: targetArray , target: 0)
+    return result
+}
+
+// 포인트는 조합. 각 course에 맞는 각 order의 조합을 구해 거기서 최대값을 계속 찾아 그게 끝.
+func solution(_ orders:[String], _ course:[Int]) -> [String] {
+    var result = Array<String>()
+    
+    for count in course {
+        var currentSaveDic = [[String]:Int]()
+        var maxCount = 2
+        var maxSave:[String] = []
+        for order in orders {
+            let orderArray = order.map{String($0)}.sorted()
+            let comb = combination(n: orderArray.count, r: count, targetArray: orderArray , basic: "")
+            for x in comb {
+                if currentSaveDic[x] == nil {
+                    currentSaveDic.updateValue(1, forKey: x)
+                } else {
+                    currentSaveDic[x]! += 1
+                    if maxCount < currentSaveDic[x]! {
+                        maxSave.removeAll()
+                        maxSave.append(x.reduce("", +))
+                        maxCount = currentSaveDic[x]!
+                    } else if maxCount == currentSaveDic[x]! {
+                        maxSave.append(x.reduce("", +))
+                    } else { }
+                }
+            }
+        }
+        result += maxSave
+    }
+    return result.sorted()
+}
+
+let orders = (["ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"],[2,3,4])
+//let orders = (["ABCDE", "AB", "CD", "ADE", "XYZ", "XYZ", "ACD"],[2,3,5])
+//let orders = (["XYZ", "XWY", "WXA"],[2,3,4])
+
+//solution(orders.0, orders.1)
+
+
+
+
+func solution(_ s:String) -> [Int] {
+    var arragedArray = s.split(separator: "}").map{$0.trimmingCharacters(in: ["{",","])}
+    arragedArray.sort { $0.count < $1.count }
+    var result = Array<Int>()
+    for value in arragedArray {
+        let valueArray = value.split(separator: ",").map{Int($0)!}
+        for x in valueArray {
+            if !result.contains(x) {
+                result.append(x)
+            }
+        }
+    }
+    
+    return result
+}
+
+//let s = "{{2},{2,1},{2,1,3},{2,1,3,4}}"
+//let s = "{{1,2,3},{2,1},{1,2,4,3},{2}}"
+//let s = "{{20,111},{111}}"
+let s = "{{4,2,3},{3},{2,3,4,1},{2,3}}"
+
+//solution(s)
+
+//Summer/Winter Coding(~2018) 영어 끝말잇기
+
+func solution(_ n:Int, _ words:[String]) -> [Int] {
+    var updateWordContainer = Array<String>()
+    for word in words {
+        if updateWordContainer.isEmpty {
+            updateWordContainer.append(word)
+        } else {
+            let lastCharacter = updateWordContainer.last!.last!
+            let firstCharacter = word.first!
+            if updateWordContainer.contains(word) {
+                let totalCount = updateWordContainer.count + 1
+                if totalCount % n == 0 {
+                    return [n,totalCount/n]
+                } else {
+                    return [totalCount%n,totalCount/n+1]
+                }
+            }
+            
+            if lastCharacter == firstCharacter {
+                updateWordContainer.append(word)
+            } else {
+                let totalCount = updateWordContainer.count + 1
+                if totalCount % n == 0 {
+                    return [n,totalCount/n]
+                } else {
+                    return [totalCount%n,totalCount/n+1]
+                }
+                
+            }
+            
+        }
+    }
+    
+    return [0,0]
+}
+//solution(2,["hello", "one", "even", "never", "now", "world", "draw"])
+
+["java and backend and junior and pizza 100","python and frontend and senior and chicken 200","cpp and - and senior and pizza 250","- and backend and senior and - 150","- and - and - and chicken 100","- and - and - and - 150"]
+
+
+"java and backend and junior and pizza 100".split(separator: " ").filter{$0 != "and"}.map{String($0)}
+
+struct User {
+    enum Language:String {
+        case java = "java",python = "python" ,cpp = "cpp",none = "-"
+    }
+    enum Job {
+        case backend = "backend" , frontend
+    }
+    let language: Language
+    let job: Job
+}
+
+
+
+
+
+
+
+
+
 
