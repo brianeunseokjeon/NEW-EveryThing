@@ -67,7 +67,7 @@ func solution(_ n:Int, _ lost:[Int], _ reserve:[Int]) -> Int {
 //let greedy1 = (2,[2],[2])
 let greedy1 = (4,[3,1],[4,2])
 
-solution(greedy1.0, greedy1.1, greedy1.2)
+//solution(greedy1.0, greedy1.1, greedy1.2)
 //ABCDEFGHUJ K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z
 //012345678910 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
 
@@ -166,5 +166,26 @@ func solution(_ number:String, _ k:Int) -> String {
     return result
 }
 
+//
+//solution("7777", 2)
 
-solution("7777", 2)
+//인프런 회의실 배정문제
+func maxConference(_ conferenceConut:Int, times: [[Int]]) -> [[Int]] {
+    let conferenceTimes = times.sorted { $0[1] < $1[1] }
+    var beforeEndTime = 0
+    var resultMeeting = [[Int]]()
+
+    for x in conferenceTimes {
+        if beforeEndTime <= x[0] {
+            resultMeeting.append(x)
+            beforeEndTime = x[1]
+        }
+    }
+    return resultMeeting
+}
+
+let conference = (5 , [[1,4],[2,3],[3,5],[4,6],[5,7]])
+//maxConference(conference.0, times: conference.1)
+
+
+
