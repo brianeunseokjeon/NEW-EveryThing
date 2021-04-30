@@ -1,33 +1,24 @@
 import UIKit
 
 
-//DFS 레벨2단계 타겟넘버
+//DFS 레벨2단계 타겟넘버 수정.
 
 func solution(_ numbers:[Int], _ target:Int) -> Int {
-    var save = 0
-    func dfs(_ numbers:[Int],_ current:Int,_ target: Int) {
-        var numbers = numbers
-        var current = current
-        if numbers.isEmpty {
-            if target == current {
-                save += 1
+    var result = 0
+    func DFS(sum:Int,level:Int) {
+        if level == numbers.count {
+            if sum == target {
+                result += 1
             }
-        } else {
-            // 두가지 덧셈을 할것이냐? 아니면 뺄셈을 할것이냐?
-            let removeFirst = numbers.removeFirst()
-            current += removeFirst
-            dfs(numbers, current, target)
-            current -= removeFirst
-            current -= removeFirst
-            dfs(numbers, current, target)
+            return
         }
         
+        DFS(sum: sum+numbers[level], level: level+1)
+        DFS(sum: sum-numbers[level], level: level+1)
     }
-    
-    dfs(numbers, 0, target)
-    return save
+    DFS(sum:0,level:0)
+    return result
 }
-
 
 
 
