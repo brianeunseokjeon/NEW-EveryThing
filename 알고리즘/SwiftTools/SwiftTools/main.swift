@@ -73,20 +73,73 @@ struct Solution4 {
 }
 
 
-struct Solution5 {
+struct Solution_Programmers_Network {
     init() {
         let n = Int(readLine()!)!
-        var computers = [[Int]]()
+        var clothes = [[String]]()
+        
+        var dic = [String:[String]]()
         
         for _ in 1...n {
-            let comp = readLine()!.split(separator: " ").map{Int($0)!}
-            computers.append(comp)
+            let clo = readLine()!.split(separator: " ").map{String($0)}
+            clothes.append(clo)
+        }
+      
+        for i in 0..<n {
+            let part = clothes[i][1]
+            let cloth = clothes[i][0]
+            if dic[part] == nil {
+                dic.updateValue([cloth], forKey: part)
+            } else {
+                dic[part]?.append(cloth)
+            }
         }
         
+        let totalCases = numberOfCases(dic)
         
-       
+        print(totalCases)
+    }
+    
+    
+    func numberOfCases(_ dic:[String : [String]]) -> Int {
+        let key = dic.keys
+        var total = 1
+        for k in key {
+            total *= (dic[k]!.count + 1)
+        }
+        total -= 1
+        return total
     }
 }
 
 
 
+
+
+func solution(_ clothes:[[String]]) -> Int {
+    func numberOfCases(_ dic:[String : [String]]) -> Int {
+        let key = dic.keys
+        var total = 1
+        for k in key {
+            total *= (dic[k]!.count + 1)
+        }
+        total -= 1
+        return total
+    }
+    
+    var dic = [String:[String]]()
+    
+  
+    for i in 0..<clothes.count {
+        let part = clothes[i][1]
+        let cloth = clothes[i][0]
+        if dic[part] == nil {
+            dic.updateValue([cloth], forKey: part)
+        } else {
+            dic[part]?.append(cloth)
+        }
+    }
+    
+    let totalCases = numberOfCases(dic)
+    return totalCases
+}

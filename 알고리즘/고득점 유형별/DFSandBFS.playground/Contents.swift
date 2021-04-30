@@ -175,5 +175,5 @@ func solution(_ tickets:[[String]]) -> [String] {
 }
 let ticket = [["ICN", "JFK"], ["HND", "IAD"], ["JFK", "HND"]] //["ICN", "JFK", "HND", "IAD"]
 //let ticket = [["ICN", "SFO"], ["ICN", "ATL"], ["SFO", "ATL"], ["ATL", "ICN"], ["ATL","SFO"]] // ["ICN", "ATL", "ICN", "SFO", "ATL", "SFO"]
-solution(ticket)
+//solution(ticket)
 
