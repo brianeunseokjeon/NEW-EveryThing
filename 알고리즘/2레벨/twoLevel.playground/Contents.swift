@@ -247,17 +247,20 @@ func solution(_ n:Int, _ words:[String]) -> [Int] {
 ["java and backend and junior and pizza 100","python and frontend and senior and chicken 200","cpp and - and senior and pizza 250","- and backend and senior and - 150","- and - and - and chicken 100","- and - and - and - 150"]
 
 
-"java and backend and junior and pizza 100".split(separator: " ").filter{$0 != "and"}.map{String($0)}
+print("java and backend and junior and pizza 100".split(separator: " ").filter{$0 != "and"}.map{String($0)})
 
 struct User {
-    enum Language:String {
-        case java = "java",python = "python" ,cpp = "cpp",none = "-"
-    }
-    enum Job {
-        case backend = "backend" , frontend
-    }
-    let language: Language
-    let job: Job
+  
+}
+
+
+
+
+
+func solution(_ info:[String], _ query:[String]) -> [Int] {
+    let info = info.map{[$0.split(separator: " ").map{String($0)}]}
+    
+    return []
 }
 
 
