@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  AnimationOfT
+//  NewAES
 //
-//  Created by brian on 2021/05/21.
+//  Created by 맥북프로에임메드 on 2021/05/24.
 //
 
 import UIKit

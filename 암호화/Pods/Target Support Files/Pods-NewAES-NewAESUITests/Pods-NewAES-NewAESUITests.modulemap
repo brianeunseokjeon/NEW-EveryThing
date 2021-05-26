@@ -1,0 +1,6 @@
+framework module Pods_NewAES_NewAESUITests {
+  umbrella header "Pods-NewAES-NewAESUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

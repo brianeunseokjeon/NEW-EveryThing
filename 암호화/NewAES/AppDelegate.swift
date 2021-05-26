@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  AnimationOfT
+//  NewAES
 //
-//  Created by brian on 2021/05/21.
+//  Created by 맥북프로에임메드 on 2021/05/24.
 //
 
 import UIKit
@@ -11,11 +11,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-    var window: UIWindow?
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow()
-        window?.makeKeyAndVisible()
-        window?.rootViewController = CABasicAnimationController()
+        // Override point for customization after application launch.
         return true
     }
 
